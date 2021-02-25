@@ -44,7 +44,7 @@ public interface State extends NamedElement {
 	 * @see #setInputEvent(Event)
 	 * @see fr.inria.kairos.tuto.simplelanguage.SimplelanguagePackage#getState_InputEvent()
 	 * @see fr.inria.kairos.tuto.simplelanguage.Event#getTargetState
-	 * @model opposite="targetState"
+	 * @model opposite="targetState" transient="true"
 	 * @generated
 	 */
 	Event getInputEvent();
@@ -68,7 +68,7 @@ public interface State extends NamedElement {
 	 * @see #setOutputEvent(Event)
 	 * @see fr.inria.kairos.tuto.simplelanguage.SimplelanguagePackage#getState_OutputEvent()
 	 * @see fr.inria.kairos.tuto.simplelanguage.Event#getSourceState
-	 * @model opposite="sourceState"
+	 * @model opposite="sourceState" transient="true"
 	 * @generated
 	 */
 	Event getOutputEvent();

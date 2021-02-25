@@ -74,24 +74,6 @@ public class EventImpl extends NamedElementImpl implements Event {
 	 * @generated
 	 */
 	public State getTargetState() {
-		if (targetState != null && targetState.eIsProxy()) {
-			InternalEObject oldTargetState = (InternalEObject) targetState;
-			targetState = (State) eResolveProxy(oldTargetState);
-			if (targetState != oldTargetState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplelanguagePackage.EVENT__TARGET_STATE,
-							oldTargetState, targetState));
-			}
-		}
-		return targetState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State basicGetTargetState() {
 		return targetState;
 	}
 
@@ -142,24 +124,6 @@ public class EventImpl extends NamedElementImpl implements Event {
 	 * @generated
 	 */
 	public State getSourceState() {
-		if (sourceState != null && sourceState.eIsProxy()) {
-			InternalEObject oldSourceState = (InternalEObject) sourceState;
-			sourceState = (State) eResolveProxy(oldSourceState);
-			if (sourceState != oldSourceState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, SimplelanguagePackage.EVENT__SOURCE_STATE,
-							oldSourceState, sourceState));
-			}
-		}
-		return sourceState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State basicGetSourceState() {
 		return sourceState;
 	}
 
@@ -251,13 +215,9 @@ public class EventImpl extends NamedElementImpl implements Event {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case SimplelanguagePackage.EVENT__TARGET_STATE:
-			if (resolve)
-				return getTargetState();
-			return basicGetTargetState();
+			return getTargetState();
 		case SimplelanguagePackage.EVENT__SOURCE_STATE:
-			if (resolve)
-				return getSourceState();
-			return basicGetSourceState();
+			return getSourceState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

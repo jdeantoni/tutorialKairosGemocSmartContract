@@ -24,7 +24,8 @@ Event returns Event:
 	{Event}
 	'Event'
 	name=EString
-		'from' sourceState=[State|EString]
+		'from' sourceState=[State|EString] //I fixed the opposite problems by following this: https://bugs.eclipse.org/bugs/show_bug.cgi?format=multiple&id=282486 
+										   //                                                 comment 8
 		'to' targetState=[State|EString]
 	;
 
@@ -32,9 +33,9 @@ State returns State:
 	{State}
 	'State'
 	name=EString
-//		('inputEvent' inputEvent=[Event|EString])?
-		('outputEvent' outputEvent=[Event|EString])?
-		'var' ':' (ownedVariables+=Variable )*
+//		('inEvent' inputEvent=[Event|EString])?
+//		('outEvent' outputEvent=[Event|EString])?
+		('var' ':' ownedVariables+=Variable )? (ownedVariables+=Variable)*
 	;
 
 Function returns Function:

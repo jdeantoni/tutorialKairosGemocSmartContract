@@ -816,7 +816,6 @@ rule__State__Group__4
 	}
 :
 	rule__State__Group__4__Impl
-	rule__State__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -828,62 +827,9 @@ rule__State__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getStateAccess().getVarKeyword_4()); }
-	'var'
-	{ after(grammarAccess.getStateAccess().getVarKeyword_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__State__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__State__Group__5__Impl
-	rule__State__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__State__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getStateAccess().getColonKeyword_5()); }
-	':'
-	{ after(grammarAccess.getStateAccess().getColonKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__State__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__State__Group__6__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__State__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_6()); }
-	(rule__State__OwnedVariablesAssignment_6)*
-	{ after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_6()); }
+	{ before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_4()); }
+	(rule__State__OwnedVariablesAssignment_4)*
+	{ after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_4()); }
 )
 ;
 finally {
@@ -909,9 +855,9 @@ rule__State__Group_3__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getStateAccess().getOutputEventKeyword_3_0()); }
-	'outputEvent'
-	{ after(grammarAccess.getStateAccess().getOutputEventKeyword_3_0()); }
+	{ before(grammarAccess.getStateAccess().getVarKeyword_3_0()); }
+	'var'
+	{ after(grammarAccess.getStateAccess().getVarKeyword_3_0()); }
 )
 ;
 finally {
@@ -924,6 +870,7 @@ rule__State__Group_3__1
 	}
 :
 	rule__State__Group_3__1__Impl
+	rule__State__Group_3__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -935,9 +882,35 @@ rule__State__Group_3__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getStateAccess().getOutputEventAssignment_3_1()); }
-	(rule__State__OutputEventAssignment_3_1)
-	{ after(grammarAccess.getStateAccess().getOutputEventAssignment_3_1()); }
+	{ before(grammarAccess.getStateAccess().getColonKeyword_3_1()); }
+	':'
+	{ after(grammarAccess.getStateAccess().getColonKeyword_3_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__State__Group_3__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__State__Group_3__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__State__Group_3__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_3_2()); }
+	(rule__State__OwnedVariablesAssignment_3_2)
+	{ after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_3_2()); }
 )
 ;
 finally {
@@ -1524,34 +1497,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__State__OutputEventAssignment_3_1
+rule__State__OwnedVariablesAssignment_3_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getStateAccess().getOutputEventEventCrossReference_3_1_0()); }
-		(
-			{ before(grammarAccess.getStateAccess().getOutputEventEventEStringParserRuleCall_3_1_0_1()); }
-			ruleEString
-			{ after(grammarAccess.getStateAccess().getOutputEventEventEStringParserRuleCall_3_1_0_1()); }
-		)
-		{ after(grammarAccess.getStateAccess().getOutputEventEventCrossReference_3_1_0()); }
+		{ before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_3_2_0()); }
+		ruleVariable
+		{ after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_3_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__State__OwnedVariablesAssignment_6
+rule__State__OwnedVariablesAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_6_0()); }
+		{ before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_4_0()); }
 		ruleVariable
-		{ after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_6_0()); }
+		{ after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_4_0()); }
 	)
 ;
 finally {

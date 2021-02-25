@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSmartContractMLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'SmartContract'", "'->'", "'Event'", "'from'", "'to'", "'State'", "'var'", "':'", "'outputEvent'", "'Function'", "'('", "')'", "'int'", "'='", "'-'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'SmartContract'", "'->'", "'Event'", "'from'", "'to'", "'State'", "'var'", "':'", "'Function'", "'('", "')'", "'int'", "'='", "'-'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -44,7 +44,6 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
     public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
     public static final int T__24=24;
-    public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
 
@@ -1354,7 +1353,7 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
                 int alt5=2;
                 int LA5_0 = input.LA(1);
 
-                if ( (LA5_0==20) ) {
+                if ( (LA5_0==19) ) {
                     alt5=1;
                 }
 
@@ -2395,7 +2394,7 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==19) ) {
+            if ( (LA6_0==17) ) {
                 alt6=1;
             }
             switch (alt6) {
@@ -2436,22 +2435,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__Group__4"
-    // InternalSmartContractML.g:813:1: rule__State__Group__4 : rule__State__Group__4__Impl rule__State__Group__5 ;
+    // InternalSmartContractML.g:813:1: rule__State__Group__4 : rule__State__Group__4__Impl ;
     public final void rule__State__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:817:1: ( rule__State__Group__4__Impl rule__State__Group__5 )
-            // InternalSmartContractML.g:818:2: rule__State__Group__4__Impl rule__State__Group__5
+            // InternalSmartContractML.g:817:1: ( rule__State__Group__4__Impl )
+            // InternalSmartContractML.g:818:2: rule__State__Group__4__Impl
             {
-            pushFollow(FOLLOW_14);
-            rule__State__Group__4__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__State__Group__5();
+            rule__State__Group__4__Impl();
 
             state._fsp--;
 
@@ -2474,21 +2468,49 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__Group__4__Impl"
-    // InternalSmartContractML.g:825:1: rule__State__Group__4__Impl : ( 'var' ) ;
+    // InternalSmartContractML.g:824:1: rule__State__Group__4__Impl : ( ( rule__State__OwnedVariablesAssignment_4 )* ) ;
     public final void rule__State__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:829:1: ( ( 'var' ) )
-            // InternalSmartContractML.g:830:1: ( 'var' )
+            // InternalSmartContractML.g:828:1: ( ( ( rule__State__OwnedVariablesAssignment_4 )* ) )
+            // InternalSmartContractML.g:829:1: ( ( rule__State__OwnedVariablesAssignment_4 )* )
             {
-            // InternalSmartContractML.g:830:1: ( 'var' )
-            // InternalSmartContractML.g:831:2: 'var'
+            // InternalSmartContractML.g:829:1: ( ( rule__State__OwnedVariablesAssignment_4 )* )
+            // InternalSmartContractML.g:830:2: ( rule__State__OwnedVariablesAssignment_4 )*
             {
-             before(grammarAccess.getStateAccess().getVarKeyword_4()); 
-            match(input,17,FOLLOW_2); 
-             after(grammarAccess.getStateAccess().getVarKeyword_4()); 
+             before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_4()); 
+            // InternalSmartContractML.g:831:2: ( rule__State__OwnedVariablesAssignment_4 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( (LA7_0==22) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // InternalSmartContractML.g:831:3: rule__State__OwnedVariablesAssignment_4
+            	    {
+            	    pushFollow(FOLLOW_14);
+            	    rule__State__OwnedVariablesAssignment_4();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_4()); 
 
             }
 
@@ -2510,190 +2532,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
     // $ANTLR end "rule__State__Group__4__Impl"
 
 
-    // $ANTLR start "rule__State__Group__5"
-    // InternalSmartContractML.g:840:1: rule__State__Group__5 : rule__State__Group__5__Impl rule__State__Group__6 ;
-    public final void rule__State__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmartContractML.g:844:1: ( rule__State__Group__5__Impl rule__State__Group__6 )
-            // InternalSmartContractML.g:845:2: rule__State__Group__5__Impl rule__State__Group__6
-            {
-            pushFollow(FOLLOW_15);
-            rule__State__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__State__Group__6();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__State__Group__5"
-
-
-    // $ANTLR start "rule__State__Group__5__Impl"
-    // InternalSmartContractML.g:852:1: rule__State__Group__5__Impl : ( ':' ) ;
-    public final void rule__State__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmartContractML.g:856:1: ( ( ':' ) )
-            // InternalSmartContractML.g:857:1: ( ':' )
-            {
-            // InternalSmartContractML.g:857:1: ( ':' )
-            // InternalSmartContractML.g:858:2: ':'
-            {
-             before(grammarAccess.getStateAccess().getColonKeyword_5()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getStateAccess().getColonKeyword_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__State__Group__5__Impl"
-
-
-    // $ANTLR start "rule__State__Group__6"
-    // InternalSmartContractML.g:867:1: rule__State__Group__6 : rule__State__Group__6__Impl ;
-    public final void rule__State__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmartContractML.g:871:1: ( rule__State__Group__6__Impl )
-            // InternalSmartContractML.g:872:2: rule__State__Group__6__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__State__Group__6__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__State__Group__6"
-
-
-    // $ANTLR start "rule__State__Group__6__Impl"
-    // InternalSmartContractML.g:878:1: rule__State__Group__6__Impl : ( ( rule__State__OwnedVariablesAssignment_6 )* ) ;
-    public final void rule__State__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmartContractML.g:882:1: ( ( ( rule__State__OwnedVariablesAssignment_6 )* ) )
-            // InternalSmartContractML.g:883:1: ( ( rule__State__OwnedVariablesAssignment_6 )* )
-            {
-            // InternalSmartContractML.g:883:1: ( ( rule__State__OwnedVariablesAssignment_6 )* )
-            // InternalSmartContractML.g:884:2: ( rule__State__OwnedVariablesAssignment_6 )*
-            {
-             before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_6()); 
-            // InternalSmartContractML.g:885:2: ( rule__State__OwnedVariablesAssignment_6 )*
-            loop7:
-            do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
-
-                if ( (LA7_0==23) ) {
-                    alt7=1;
-                }
-
-
-                switch (alt7) {
-            	case 1 :
-            	    // InternalSmartContractML.g:885:3: rule__State__OwnedVariablesAssignment_6
-            	    {
-            	    pushFollow(FOLLOW_16);
-            	    rule__State__OwnedVariablesAssignment_6();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop7;
-                }
-            } while (true);
-
-             after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__State__Group__6__Impl"
-
-
     // $ANTLR start "rule__State__Group_3__0"
-    // InternalSmartContractML.g:894:1: rule__State__Group_3__0 : rule__State__Group_3__0__Impl rule__State__Group_3__1 ;
+    // InternalSmartContractML.g:840:1: rule__State__Group_3__0 : rule__State__Group_3__0__Impl rule__State__Group_3__1 ;
     public final void rule__State__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:898:1: ( rule__State__Group_3__0__Impl rule__State__Group_3__1 )
-            // InternalSmartContractML.g:899:2: rule__State__Group_3__0__Impl rule__State__Group_3__1
+            // InternalSmartContractML.g:844:1: ( rule__State__Group_3__0__Impl rule__State__Group_3__1 )
+            // InternalSmartContractML.g:845:2: rule__State__Group_3__0__Impl rule__State__Group_3__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_15);
             rule__State__Group_3__0__Impl();
 
             state._fsp--;
@@ -2722,21 +2571,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__Group_3__0__Impl"
-    // InternalSmartContractML.g:906:1: rule__State__Group_3__0__Impl : ( 'outputEvent' ) ;
+    // InternalSmartContractML.g:852:1: rule__State__Group_3__0__Impl : ( 'var' ) ;
     public final void rule__State__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:910:1: ( ( 'outputEvent' ) )
-            // InternalSmartContractML.g:911:1: ( 'outputEvent' )
+            // InternalSmartContractML.g:856:1: ( ( 'var' ) )
+            // InternalSmartContractML.g:857:1: ( 'var' )
             {
-            // InternalSmartContractML.g:911:1: ( 'outputEvent' )
-            // InternalSmartContractML.g:912:2: 'outputEvent'
+            // InternalSmartContractML.g:857:1: ( 'var' )
+            // InternalSmartContractML.g:858:2: 'var'
             {
-             before(grammarAccess.getStateAccess().getOutputEventKeyword_3_0()); 
-            match(input,19,FOLLOW_2); 
-             after(grammarAccess.getStateAccess().getOutputEventKeyword_3_0()); 
+             before(grammarAccess.getStateAccess().getVarKeyword_3_0()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getStateAccess().getVarKeyword_3_0()); 
 
             }
 
@@ -2759,17 +2608,22 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__Group_3__1"
-    // InternalSmartContractML.g:921:1: rule__State__Group_3__1 : rule__State__Group_3__1__Impl ;
+    // InternalSmartContractML.g:867:1: rule__State__Group_3__1 : rule__State__Group_3__1__Impl rule__State__Group_3__2 ;
     public final void rule__State__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:925:1: ( rule__State__Group_3__1__Impl )
-            // InternalSmartContractML.g:926:2: rule__State__Group_3__1__Impl
+            // InternalSmartContractML.g:871:1: ( rule__State__Group_3__1__Impl rule__State__Group_3__2 )
+            // InternalSmartContractML.g:872:2: rule__State__Group_3__1__Impl rule__State__Group_3__2
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_16);
             rule__State__Group_3__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__State__Group_3__2();
 
             state._fsp--;
 
@@ -2792,31 +2646,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__Group_3__1__Impl"
-    // InternalSmartContractML.g:932:1: rule__State__Group_3__1__Impl : ( ( rule__State__OutputEventAssignment_3_1 ) ) ;
+    // InternalSmartContractML.g:879:1: rule__State__Group_3__1__Impl : ( ':' ) ;
     public final void rule__State__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:936:1: ( ( ( rule__State__OutputEventAssignment_3_1 ) ) )
-            // InternalSmartContractML.g:937:1: ( ( rule__State__OutputEventAssignment_3_1 ) )
+            // InternalSmartContractML.g:883:1: ( ( ':' ) )
+            // InternalSmartContractML.g:884:1: ( ':' )
             {
-            // InternalSmartContractML.g:937:1: ( ( rule__State__OutputEventAssignment_3_1 ) )
-            // InternalSmartContractML.g:938:2: ( rule__State__OutputEventAssignment_3_1 )
+            // InternalSmartContractML.g:884:1: ( ':' )
+            // InternalSmartContractML.g:885:2: ':'
             {
-             before(grammarAccess.getStateAccess().getOutputEventAssignment_3_1()); 
-            // InternalSmartContractML.g:939:2: ( rule__State__OutputEventAssignment_3_1 )
-            // InternalSmartContractML.g:939:3: rule__State__OutputEventAssignment_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__State__OutputEventAssignment_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getStateAccess().getOutputEventAssignment_3_1()); 
+             before(grammarAccess.getStateAccess().getColonKeyword_3_1()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getStateAccess().getColonKeyword_3_1()); 
 
             }
 
@@ -2838,15 +2682,95 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
     // $ANTLR end "rule__State__Group_3__1__Impl"
 
 
+    // $ANTLR start "rule__State__Group_3__2"
+    // InternalSmartContractML.g:894:1: rule__State__Group_3__2 : rule__State__Group_3__2__Impl ;
+    public final void rule__State__Group_3__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmartContractML.g:898:1: ( rule__State__Group_3__2__Impl )
+            // InternalSmartContractML.g:899:2: rule__State__Group_3__2__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__State__Group_3__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group_3__2"
+
+
+    // $ANTLR start "rule__State__Group_3__2__Impl"
+    // InternalSmartContractML.g:905:1: rule__State__Group_3__2__Impl : ( ( rule__State__OwnedVariablesAssignment_3_2 ) ) ;
+    public final void rule__State__Group_3__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmartContractML.g:909:1: ( ( ( rule__State__OwnedVariablesAssignment_3_2 ) ) )
+            // InternalSmartContractML.g:910:1: ( ( rule__State__OwnedVariablesAssignment_3_2 ) )
+            {
+            // InternalSmartContractML.g:910:1: ( ( rule__State__OwnedVariablesAssignment_3_2 ) )
+            // InternalSmartContractML.g:911:2: ( rule__State__OwnedVariablesAssignment_3_2 )
+            {
+             before(grammarAccess.getStateAccess().getOwnedVariablesAssignment_3_2()); 
+            // InternalSmartContractML.g:912:2: ( rule__State__OwnedVariablesAssignment_3_2 )
+            // InternalSmartContractML.g:912:3: rule__State__OwnedVariablesAssignment_3_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__State__OwnedVariablesAssignment_3_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getStateAccess().getOwnedVariablesAssignment_3_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__Group_3__2__Impl"
+
+
     // $ANTLR start "rule__Function__Group__0"
-    // InternalSmartContractML.g:948:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
+    // InternalSmartContractML.g:921:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
     public final void rule__Function__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:952:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
-            // InternalSmartContractML.g:953:2: rule__Function__Group__0__Impl rule__Function__Group__1
+            // InternalSmartContractML.g:925:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
+            // InternalSmartContractML.g:926:2: rule__Function__Group__0__Impl rule__Function__Group__1
             {
             pushFollow(FOLLOW_17);
             rule__Function__Group__0__Impl();
@@ -2877,21 +2801,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__0__Impl"
-    // InternalSmartContractML.g:960:1: rule__Function__Group__0__Impl : ( () ) ;
+    // InternalSmartContractML.g:933:1: rule__Function__Group__0__Impl : ( () ) ;
     public final void rule__Function__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:964:1: ( ( () ) )
-            // InternalSmartContractML.g:965:1: ( () )
+            // InternalSmartContractML.g:937:1: ( ( () ) )
+            // InternalSmartContractML.g:938:1: ( () )
             {
-            // InternalSmartContractML.g:965:1: ( () )
-            // InternalSmartContractML.g:966:2: ()
+            // InternalSmartContractML.g:938:1: ( () )
+            // InternalSmartContractML.g:939:2: ()
             {
              before(grammarAccess.getFunctionAccess().getFunctionAction_0()); 
-            // InternalSmartContractML.g:967:2: ()
-            // InternalSmartContractML.g:967:3: 
+            // InternalSmartContractML.g:940:2: ()
+            // InternalSmartContractML.g:940:3: 
             {
             }
 
@@ -2914,14 +2838,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__1"
-    // InternalSmartContractML.g:975:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
+    // InternalSmartContractML.g:948:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
     public final void rule__Function__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:979:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
-            // InternalSmartContractML.g:980:2: rule__Function__Group__1__Impl rule__Function__Group__2
+            // InternalSmartContractML.g:952:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
+            // InternalSmartContractML.g:953:2: rule__Function__Group__1__Impl rule__Function__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__Function__Group__1__Impl();
@@ -2952,20 +2876,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__1__Impl"
-    // InternalSmartContractML.g:987:1: rule__Function__Group__1__Impl : ( 'Function' ) ;
+    // InternalSmartContractML.g:960:1: rule__Function__Group__1__Impl : ( 'Function' ) ;
     public final void rule__Function__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:991:1: ( ( 'Function' ) )
-            // InternalSmartContractML.g:992:1: ( 'Function' )
+            // InternalSmartContractML.g:964:1: ( ( 'Function' ) )
+            // InternalSmartContractML.g:965:1: ( 'Function' )
             {
-            // InternalSmartContractML.g:992:1: ( 'Function' )
-            // InternalSmartContractML.g:993:2: 'Function'
+            // InternalSmartContractML.g:965:1: ( 'Function' )
+            // InternalSmartContractML.g:966:2: 'Function'
             {
              before(grammarAccess.getFunctionAccess().getFunctionKeyword_1()); 
-            match(input,20,FOLLOW_2); 
+            match(input,19,FOLLOW_2); 
              after(grammarAccess.getFunctionAccess().getFunctionKeyword_1()); 
 
             }
@@ -2989,14 +2913,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__2"
-    // InternalSmartContractML.g:1002:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
+    // InternalSmartContractML.g:975:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
     public final void rule__Function__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1006:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
-            // InternalSmartContractML.g:1007:2: rule__Function__Group__2__Impl rule__Function__Group__3
+            // InternalSmartContractML.g:979:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
+            // InternalSmartContractML.g:980:2: rule__Function__Group__2__Impl rule__Function__Group__3
             {
             pushFollow(FOLLOW_18);
             rule__Function__Group__2__Impl();
@@ -3027,21 +2951,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__2__Impl"
-    // InternalSmartContractML.g:1014:1: rule__Function__Group__2__Impl : ( ( rule__Function__NameAssignment_2 ) ) ;
+    // InternalSmartContractML.g:987:1: rule__Function__Group__2__Impl : ( ( rule__Function__NameAssignment_2 ) ) ;
     public final void rule__Function__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1018:1: ( ( ( rule__Function__NameAssignment_2 ) ) )
-            // InternalSmartContractML.g:1019:1: ( ( rule__Function__NameAssignment_2 ) )
+            // InternalSmartContractML.g:991:1: ( ( ( rule__Function__NameAssignment_2 ) ) )
+            // InternalSmartContractML.g:992:1: ( ( rule__Function__NameAssignment_2 ) )
             {
-            // InternalSmartContractML.g:1019:1: ( ( rule__Function__NameAssignment_2 ) )
-            // InternalSmartContractML.g:1020:2: ( rule__Function__NameAssignment_2 )
+            // InternalSmartContractML.g:992:1: ( ( rule__Function__NameAssignment_2 ) )
+            // InternalSmartContractML.g:993:2: ( rule__Function__NameAssignment_2 )
             {
              before(grammarAccess.getFunctionAccess().getNameAssignment_2()); 
-            // InternalSmartContractML.g:1021:2: ( rule__Function__NameAssignment_2 )
-            // InternalSmartContractML.g:1021:3: rule__Function__NameAssignment_2
+            // InternalSmartContractML.g:994:2: ( rule__Function__NameAssignment_2 )
+            // InternalSmartContractML.g:994:3: rule__Function__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Function__NameAssignment_2();
@@ -3074,14 +2998,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__3"
-    // InternalSmartContractML.g:1029:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
+    // InternalSmartContractML.g:1002:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
     public final void rule__Function__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1033:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
-            // InternalSmartContractML.g:1034:2: rule__Function__Group__3__Impl rule__Function__Group__4
+            // InternalSmartContractML.g:1006:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
+            // InternalSmartContractML.g:1007:2: rule__Function__Group__3__Impl rule__Function__Group__4
             {
             pushFollow(FOLLOW_19);
             rule__Function__Group__3__Impl();
@@ -3112,20 +3036,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__3__Impl"
-    // InternalSmartContractML.g:1041:1: rule__Function__Group__3__Impl : ( '(' ) ;
+    // InternalSmartContractML.g:1014:1: rule__Function__Group__3__Impl : ( '(' ) ;
     public final void rule__Function__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1045:1: ( ( '(' ) )
-            // InternalSmartContractML.g:1046:1: ( '(' )
+            // InternalSmartContractML.g:1018:1: ( ( '(' ) )
+            // InternalSmartContractML.g:1019:1: ( '(' )
             {
-            // InternalSmartContractML.g:1046:1: ( '(' )
-            // InternalSmartContractML.g:1047:2: '('
+            // InternalSmartContractML.g:1019:1: ( '(' )
+            // InternalSmartContractML.g:1020:2: '('
             {
              before(grammarAccess.getFunctionAccess().getLeftParenthesisKeyword_3()); 
-            match(input,21,FOLLOW_2); 
+            match(input,20,FOLLOW_2); 
              after(grammarAccess.getFunctionAccess().getLeftParenthesisKeyword_3()); 
 
             }
@@ -3149,16 +3073,16 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__4"
-    // InternalSmartContractML.g:1056:1: rule__Function__Group__4 : rule__Function__Group__4__Impl rule__Function__Group__5 ;
+    // InternalSmartContractML.g:1029:1: rule__Function__Group__4 : rule__Function__Group__4__Impl rule__Function__Group__5 ;
     public final void rule__Function__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1060:1: ( rule__Function__Group__4__Impl rule__Function__Group__5 )
-            // InternalSmartContractML.g:1061:2: rule__Function__Group__4__Impl rule__Function__Group__5
+            // InternalSmartContractML.g:1033:1: ( rule__Function__Group__4__Impl rule__Function__Group__5 )
+            // InternalSmartContractML.g:1034:2: rule__Function__Group__4__Impl rule__Function__Group__5
             {
-            pushFollow(FOLLOW_14);
+            pushFollow(FOLLOW_15);
             rule__Function__Group__4__Impl();
 
             state._fsp--;
@@ -3187,20 +3111,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__4__Impl"
-    // InternalSmartContractML.g:1068:1: rule__Function__Group__4__Impl : ( ')' ) ;
+    // InternalSmartContractML.g:1041:1: rule__Function__Group__4__Impl : ( ')' ) ;
     public final void rule__Function__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1072:1: ( ( ')' ) )
-            // InternalSmartContractML.g:1073:1: ( ')' )
+            // InternalSmartContractML.g:1045:1: ( ( ')' ) )
+            // InternalSmartContractML.g:1046:1: ( ')' )
             {
-            // InternalSmartContractML.g:1073:1: ( ')' )
-            // InternalSmartContractML.g:1074:2: ')'
+            // InternalSmartContractML.g:1046:1: ( ')' )
+            // InternalSmartContractML.g:1047:2: ')'
             {
              before(grammarAccess.getFunctionAccess().getRightParenthesisKeyword_4()); 
-            match(input,22,FOLLOW_2); 
+            match(input,21,FOLLOW_2); 
              after(grammarAccess.getFunctionAccess().getRightParenthesisKeyword_4()); 
 
             }
@@ -3224,14 +3148,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__5"
-    // InternalSmartContractML.g:1083:1: rule__Function__Group__5 : rule__Function__Group__5__Impl ;
+    // InternalSmartContractML.g:1056:1: rule__Function__Group__5 : rule__Function__Group__5__Impl ;
     public final void rule__Function__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1087:1: ( rule__Function__Group__5__Impl )
-            // InternalSmartContractML.g:1088:2: rule__Function__Group__5__Impl
+            // InternalSmartContractML.g:1060:1: ( rule__Function__Group__5__Impl )
+            // InternalSmartContractML.g:1061:2: rule__Function__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Function__Group__5__Impl();
@@ -3257,20 +3181,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group__5__Impl"
-    // InternalSmartContractML.g:1094:1: rule__Function__Group__5__Impl : ( ( rule__Function__Group_5__0 )? ) ;
+    // InternalSmartContractML.g:1067:1: rule__Function__Group__5__Impl : ( ( rule__Function__Group_5__0 )? ) ;
     public final void rule__Function__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1098:1: ( ( ( rule__Function__Group_5__0 )? ) )
-            // InternalSmartContractML.g:1099:1: ( ( rule__Function__Group_5__0 )? )
+            // InternalSmartContractML.g:1071:1: ( ( ( rule__Function__Group_5__0 )? ) )
+            // InternalSmartContractML.g:1072:1: ( ( rule__Function__Group_5__0 )? )
             {
-            // InternalSmartContractML.g:1099:1: ( ( rule__Function__Group_5__0 )? )
-            // InternalSmartContractML.g:1100:2: ( rule__Function__Group_5__0 )?
+            // InternalSmartContractML.g:1072:1: ( ( rule__Function__Group_5__0 )? )
+            // InternalSmartContractML.g:1073:2: ( rule__Function__Group_5__0 )?
             {
              before(grammarAccess.getFunctionAccess().getGroup_5()); 
-            // InternalSmartContractML.g:1101:2: ( rule__Function__Group_5__0 )?
+            // InternalSmartContractML.g:1074:2: ( rule__Function__Group_5__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -3279,7 +3203,7 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
             }
             switch (alt8) {
                 case 1 :
-                    // InternalSmartContractML.g:1101:3: rule__Function__Group_5__0
+                    // InternalSmartContractML.g:1074:3: rule__Function__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Function__Group_5__0();
@@ -3315,14 +3239,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group_5__0"
-    // InternalSmartContractML.g:1110:1: rule__Function__Group_5__0 : rule__Function__Group_5__0__Impl rule__Function__Group_5__1 ;
+    // InternalSmartContractML.g:1083:1: rule__Function__Group_5__0 : rule__Function__Group_5__0__Impl rule__Function__Group_5__1 ;
     public final void rule__Function__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1114:1: ( rule__Function__Group_5__0__Impl rule__Function__Group_5__1 )
-            // InternalSmartContractML.g:1115:2: rule__Function__Group_5__0__Impl rule__Function__Group_5__1
+            // InternalSmartContractML.g:1087:1: ( rule__Function__Group_5__0__Impl rule__Function__Group_5__1 )
+            // InternalSmartContractML.g:1088:2: rule__Function__Group_5__0__Impl rule__Function__Group_5__1
             {
             pushFollow(FOLLOW_4);
             rule__Function__Group_5__0__Impl();
@@ -3353,17 +3277,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group_5__0__Impl"
-    // InternalSmartContractML.g:1122:1: rule__Function__Group_5__0__Impl : ( ':' ) ;
+    // InternalSmartContractML.g:1095:1: rule__Function__Group_5__0__Impl : ( ':' ) ;
     public final void rule__Function__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1126:1: ( ( ':' ) )
-            // InternalSmartContractML.g:1127:1: ( ':' )
+            // InternalSmartContractML.g:1099:1: ( ( ':' ) )
+            // InternalSmartContractML.g:1100:1: ( ':' )
             {
-            // InternalSmartContractML.g:1127:1: ( ':' )
-            // InternalSmartContractML.g:1128:2: ':'
+            // InternalSmartContractML.g:1100:1: ( ':' )
+            // InternalSmartContractML.g:1101:2: ':'
             {
              before(grammarAccess.getFunctionAccess().getColonKeyword_5_0()); 
             match(input,18,FOLLOW_2); 
@@ -3390,14 +3314,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group_5__1"
-    // InternalSmartContractML.g:1137:1: rule__Function__Group_5__1 : rule__Function__Group_5__1__Impl ;
+    // InternalSmartContractML.g:1110:1: rule__Function__Group_5__1 : rule__Function__Group_5__1__Impl ;
     public final void rule__Function__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1141:1: ( rule__Function__Group_5__1__Impl )
-            // InternalSmartContractML.g:1142:2: rule__Function__Group_5__1__Impl
+            // InternalSmartContractML.g:1114:1: ( rule__Function__Group_5__1__Impl )
+            // InternalSmartContractML.g:1115:2: rule__Function__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Function__Group_5__1__Impl();
@@ -3423,21 +3347,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__Group_5__1__Impl"
-    // InternalSmartContractML.g:1148:1: rule__Function__Group_5__1__Impl : ( ( rule__Function__EventAssignment_5_1 ) ) ;
+    // InternalSmartContractML.g:1121:1: rule__Function__Group_5__1__Impl : ( ( rule__Function__EventAssignment_5_1 ) ) ;
     public final void rule__Function__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1152:1: ( ( ( rule__Function__EventAssignment_5_1 ) ) )
-            // InternalSmartContractML.g:1153:1: ( ( rule__Function__EventAssignment_5_1 ) )
+            // InternalSmartContractML.g:1125:1: ( ( ( rule__Function__EventAssignment_5_1 ) ) )
+            // InternalSmartContractML.g:1126:1: ( ( rule__Function__EventAssignment_5_1 ) )
             {
-            // InternalSmartContractML.g:1153:1: ( ( rule__Function__EventAssignment_5_1 ) )
-            // InternalSmartContractML.g:1154:2: ( rule__Function__EventAssignment_5_1 )
+            // InternalSmartContractML.g:1126:1: ( ( rule__Function__EventAssignment_5_1 ) )
+            // InternalSmartContractML.g:1127:2: ( rule__Function__EventAssignment_5_1 )
             {
              before(grammarAccess.getFunctionAccess().getEventAssignment_5_1()); 
-            // InternalSmartContractML.g:1155:2: ( rule__Function__EventAssignment_5_1 )
-            // InternalSmartContractML.g:1155:3: rule__Function__EventAssignment_5_1
+            // InternalSmartContractML.g:1128:2: ( rule__Function__EventAssignment_5_1 )
+            // InternalSmartContractML.g:1128:3: rule__Function__EventAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Function__EventAssignment_5_1();
@@ -3470,16 +3394,16 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__0"
-    // InternalSmartContractML.g:1164:1: rule__IntegerVariable__Group__0 : rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1 ;
+    // InternalSmartContractML.g:1137:1: rule__IntegerVariable__Group__0 : rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1 ;
     public final void rule__IntegerVariable__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1168:1: ( rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1 )
-            // InternalSmartContractML.g:1169:2: rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1
+            // InternalSmartContractML.g:1141:1: ( rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1 )
+            // InternalSmartContractML.g:1142:2: rule__IntegerVariable__Group__0__Impl rule__IntegerVariable__Group__1
             {
-            pushFollow(FOLLOW_15);
+            pushFollow(FOLLOW_16);
             rule__IntegerVariable__Group__0__Impl();
 
             state._fsp--;
@@ -3508,21 +3432,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__0__Impl"
-    // InternalSmartContractML.g:1176:1: rule__IntegerVariable__Group__0__Impl : ( () ) ;
+    // InternalSmartContractML.g:1149:1: rule__IntegerVariable__Group__0__Impl : ( () ) ;
     public final void rule__IntegerVariable__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1180:1: ( ( () ) )
-            // InternalSmartContractML.g:1181:1: ( () )
+            // InternalSmartContractML.g:1153:1: ( ( () ) )
+            // InternalSmartContractML.g:1154:1: ( () )
             {
-            // InternalSmartContractML.g:1181:1: ( () )
-            // InternalSmartContractML.g:1182:2: ()
+            // InternalSmartContractML.g:1154:1: ( () )
+            // InternalSmartContractML.g:1155:2: ()
             {
              before(grammarAccess.getIntegerVariableAccess().getIntegerVariableAction_0()); 
-            // InternalSmartContractML.g:1183:2: ()
-            // InternalSmartContractML.g:1183:3: 
+            // InternalSmartContractML.g:1156:2: ()
+            // InternalSmartContractML.g:1156:3: 
             {
             }
 
@@ -3545,14 +3469,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__1"
-    // InternalSmartContractML.g:1191:1: rule__IntegerVariable__Group__1 : rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2 ;
+    // InternalSmartContractML.g:1164:1: rule__IntegerVariable__Group__1 : rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2 ;
     public final void rule__IntegerVariable__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1195:1: ( rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2 )
-            // InternalSmartContractML.g:1196:2: rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2
+            // InternalSmartContractML.g:1168:1: ( rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2 )
+            // InternalSmartContractML.g:1169:2: rule__IntegerVariable__Group__1__Impl rule__IntegerVariable__Group__2
             {
             pushFollow(FOLLOW_4);
             rule__IntegerVariable__Group__1__Impl();
@@ -3583,20 +3507,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__1__Impl"
-    // InternalSmartContractML.g:1203:1: rule__IntegerVariable__Group__1__Impl : ( 'int' ) ;
+    // InternalSmartContractML.g:1176:1: rule__IntegerVariable__Group__1__Impl : ( 'int' ) ;
     public final void rule__IntegerVariable__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1207:1: ( ( 'int' ) )
-            // InternalSmartContractML.g:1208:1: ( 'int' )
+            // InternalSmartContractML.g:1180:1: ( ( 'int' ) )
+            // InternalSmartContractML.g:1181:1: ( 'int' )
             {
-            // InternalSmartContractML.g:1208:1: ( 'int' )
-            // InternalSmartContractML.g:1209:2: 'int'
+            // InternalSmartContractML.g:1181:1: ( 'int' )
+            // InternalSmartContractML.g:1182:2: 'int'
             {
              before(grammarAccess.getIntegerVariableAccess().getIntKeyword_1()); 
-            match(input,23,FOLLOW_2); 
+            match(input,22,FOLLOW_2); 
              after(grammarAccess.getIntegerVariableAccess().getIntKeyword_1()); 
 
             }
@@ -3620,14 +3544,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__2"
-    // InternalSmartContractML.g:1218:1: rule__IntegerVariable__Group__2 : rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3 ;
+    // InternalSmartContractML.g:1191:1: rule__IntegerVariable__Group__2 : rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3 ;
     public final void rule__IntegerVariable__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1222:1: ( rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3 )
-            // InternalSmartContractML.g:1223:2: rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3
+            // InternalSmartContractML.g:1195:1: ( rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3 )
+            // InternalSmartContractML.g:1196:2: rule__IntegerVariable__Group__2__Impl rule__IntegerVariable__Group__3
             {
             pushFollow(FOLLOW_20);
             rule__IntegerVariable__Group__2__Impl();
@@ -3658,21 +3582,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__2__Impl"
-    // InternalSmartContractML.g:1230:1: rule__IntegerVariable__Group__2__Impl : ( ( rule__IntegerVariable__NameAssignment_2 ) ) ;
+    // InternalSmartContractML.g:1203:1: rule__IntegerVariable__Group__2__Impl : ( ( rule__IntegerVariable__NameAssignment_2 ) ) ;
     public final void rule__IntegerVariable__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1234:1: ( ( ( rule__IntegerVariable__NameAssignment_2 ) ) )
-            // InternalSmartContractML.g:1235:1: ( ( rule__IntegerVariable__NameAssignment_2 ) )
+            // InternalSmartContractML.g:1207:1: ( ( ( rule__IntegerVariable__NameAssignment_2 ) ) )
+            // InternalSmartContractML.g:1208:1: ( ( rule__IntegerVariable__NameAssignment_2 ) )
             {
-            // InternalSmartContractML.g:1235:1: ( ( rule__IntegerVariable__NameAssignment_2 ) )
-            // InternalSmartContractML.g:1236:2: ( rule__IntegerVariable__NameAssignment_2 )
+            // InternalSmartContractML.g:1208:1: ( ( rule__IntegerVariable__NameAssignment_2 ) )
+            // InternalSmartContractML.g:1209:2: ( rule__IntegerVariable__NameAssignment_2 )
             {
              before(grammarAccess.getIntegerVariableAccess().getNameAssignment_2()); 
-            // InternalSmartContractML.g:1237:2: ( rule__IntegerVariable__NameAssignment_2 )
-            // InternalSmartContractML.g:1237:3: rule__IntegerVariable__NameAssignment_2
+            // InternalSmartContractML.g:1210:2: ( rule__IntegerVariable__NameAssignment_2 )
+            // InternalSmartContractML.g:1210:3: rule__IntegerVariable__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__IntegerVariable__NameAssignment_2();
@@ -3705,14 +3629,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__3"
-    // InternalSmartContractML.g:1245:1: rule__IntegerVariable__Group__3 : rule__IntegerVariable__Group__3__Impl ;
+    // InternalSmartContractML.g:1218:1: rule__IntegerVariable__Group__3 : rule__IntegerVariable__Group__3__Impl ;
     public final void rule__IntegerVariable__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1249:1: ( rule__IntegerVariable__Group__3__Impl )
-            // InternalSmartContractML.g:1250:2: rule__IntegerVariable__Group__3__Impl
+            // InternalSmartContractML.g:1222:1: ( rule__IntegerVariable__Group__3__Impl )
+            // InternalSmartContractML.g:1223:2: rule__IntegerVariable__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IntegerVariable__Group__3__Impl();
@@ -3738,29 +3662,29 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group__3__Impl"
-    // InternalSmartContractML.g:1256:1: rule__IntegerVariable__Group__3__Impl : ( ( rule__IntegerVariable__Group_3__0 )? ) ;
+    // InternalSmartContractML.g:1229:1: rule__IntegerVariable__Group__3__Impl : ( ( rule__IntegerVariable__Group_3__0 )? ) ;
     public final void rule__IntegerVariable__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1260:1: ( ( ( rule__IntegerVariable__Group_3__0 )? ) )
-            // InternalSmartContractML.g:1261:1: ( ( rule__IntegerVariable__Group_3__0 )? )
+            // InternalSmartContractML.g:1233:1: ( ( ( rule__IntegerVariable__Group_3__0 )? ) )
+            // InternalSmartContractML.g:1234:1: ( ( rule__IntegerVariable__Group_3__0 )? )
             {
-            // InternalSmartContractML.g:1261:1: ( ( rule__IntegerVariable__Group_3__0 )? )
-            // InternalSmartContractML.g:1262:2: ( rule__IntegerVariable__Group_3__0 )?
+            // InternalSmartContractML.g:1234:1: ( ( rule__IntegerVariable__Group_3__0 )? )
+            // InternalSmartContractML.g:1235:2: ( rule__IntegerVariable__Group_3__0 )?
             {
              before(grammarAccess.getIntegerVariableAccess().getGroup_3()); 
-            // InternalSmartContractML.g:1263:2: ( rule__IntegerVariable__Group_3__0 )?
+            // InternalSmartContractML.g:1236:2: ( rule__IntegerVariable__Group_3__0 )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==24) ) {
+            if ( (LA9_0==23) ) {
                 alt9=1;
             }
             switch (alt9) {
                 case 1 :
-                    // InternalSmartContractML.g:1263:3: rule__IntegerVariable__Group_3__0
+                    // InternalSmartContractML.g:1236:3: rule__IntegerVariable__Group_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__IntegerVariable__Group_3__0();
@@ -3796,14 +3720,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group_3__0"
-    // InternalSmartContractML.g:1272:1: rule__IntegerVariable__Group_3__0 : rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1 ;
+    // InternalSmartContractML.g:1245:1: rule__IntegerVariable__Group_3__0 : rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1 ;
     public final void rule__IntegerVariable__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1276:1: ( rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1 )
-            // InternalSmartContractML.g:1277:2: rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1
+            // InternalSmartContractML.g:1249:1: ( rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1 )
+            // InternalSmartContractML.g:1250:2: rule__IntegerVariable__Group_3__0__Impl rule__IntegerVariable__Group_3__1
             {
             pushFollow(FOLLOW_21);
             rule__IntegerVariable__Group_3__0__Impl();
@@ -3834,20 +3758,20 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group_3__0__Impl"
-    // InternalSmartContractML.g:1284:1: rule__IntegerVariable__Group_3__0__Impl : ( '=' ) ;
+    // InternalSmartContractML.g:1257:1: rule__IntegerVariable__Group_3__0__Impl : ( '=' ) ;
     public final void rule__IntegerVariable__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1288:1: ( ( '=' ) )
-            // InternalSmartContractML.g:1289:1: ( '=' )
+            // InternalSmartContractML.g:1261:1: ( ( '=' ) )
+            // InternalSmartContractML.g:1262:1: ( '=' )
             {
-            // InternalSmartContractML.g:1289:1: ( '=' )
-            // InternalSmartContractML.g:1290:2: '='
+            // InternalSmartContractML.g:1262:1: ( '=' )
+            // InternalSmartContractML.g:1263:2: '='
             {
              before(grammarAccess.getIntegerVariableAccess().getEqualsSignKeyword_3_0()); 
-            match(input,24,FOLLOW_2); 
+            match(input,23,FOLLOW_2); 
              after(grammarAccess.getIntegerVariableAccess().getEqualsSignKeyword_3_0()); 
 
             }
@@ -3871,14 +3795,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group_3__1"
-    // InternalSmartContractML.g:1299:1: rule__IntegerVariable__Group_3__1 : rule__IntegerVariable__Group_3__1__Impl ;
+    // InternalSmartContractML.g:1272:1: rule__IntegerVariable__Group_3__1 : rule__IntegerVariable__Group_3__1__Impl ;
     public final void rule__IntegerVariable__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1303:1: ( rule__IntegerVariable__Group_3__1__Impl )
-            // InternalSmartContractML.g:1304:2: rule__IntegerVariable__Group_3__1__Impl
+            // InternalSmartContractML.g:1276:1: ( rule__IntegerVariable__Group_3__1__Impl )
+            // InternalSmartContractML.g:1277:2: rule__IntegerVariable__Group_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__IntegerVariable__Group_3__1__Impl();
@@ -3904,21 +3828,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__Group_3__1__Impl"
-    // InternalSmartContractML.g:1310:1: rule__IntegerVariable__Group_3__1__Impl : ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) ) ;
+    // InternalSmartContractML.g:1283:1: rule__IntegerVariable__Group_3__1__Impl : ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) ) ;
     public final void rule__IntegerVariable__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1314:1: ( ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) ) )
-            // InternalSmartContractML.g:1315:1: ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) )
+            // InternalSmartContractML.g:1287:1: ( ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) ) )
+            // InternalSmartContractML.g:1288:1: ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) )
             {
-            // InternalSmartContractML.g:1315:1: ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) )
-            // InternalSmartContractML.g:1316:2: ( rule__IntegerVariable__InitialValueAssignment_3_1 )
+            // InternalSmartContractML.g:1288:1: ( ( rule__IntegerVariable__InitialValueAssignment_3_1 ) )
+            // InternalSmartContractML.g:1289:2: ( rule__IntegerVariable__InitialValueAssignment_3_1 )
             {
              before(grammarAccess.getIntegerVariableAccess().getInitialValueAssignment_3_1()); 
-            // InternalSmartContractML.g:1317:2: ( rule__IntegerVariable__InitialValueAssignment_3_1 )
-            // InternalSmartContractML.g:1317:3: rule__IntegerVariable__InitialValueAssignment_3_1
+            // InternalSmartContractML.g:1290:2: ( rule__IntegerVariable__InitialValueAssignment_3_1 )
+            // InternalSmartContractML.g:1290:3: rule__IntegerVariable__InitialValueAssignment_3_1
             {
             pushFollow(FOLLOW_2);
             rule__IntegerVariable__InitialValueAssignment_3_1();
@@ -3951,14 +3875,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__EInt__Group__0"
-    // InternalSmartContractML.g:1326:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
+    // InternalSmartContractML.g:1299:1: rule__EInt__Group__0 : rule__EInt__Group__0__Impl rule__EInt__Group__1 ;
     public final void rule__EInt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1330:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
-            // InternalSmartContractML.g:1331:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
+            // InternalSmartContractML.g:1303:1: ( rule__EInt__Group__0__Impl rule__EInt__Group__1 )
+            // InternalSmartContractML.g:1304:2: rule__EInt__Group__0__Impl rule__EInt__Group__1
             {
             pushFollow(FOLLOW_21);
             rule__EInt__Group__0__Impl();
@@ -3989,31 +3913,31 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__EInt__Group__0__Impl"
-    // InternalSmartContractML.g:1338:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
+    // InternalSmartContractML.g:1311:1: rule__EInt__Group__0__Impl : ( ( '-' )? ) ;
     public final void rule__EInt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1342:1: ( ( ( '-' )? ) )
-            // InternalSmartContractML.g:1343:1: ( ( '-' )? )
+            // InternalSmartContractML.g:1315:1: ( ( ( '-' )? ) )
+            // InternalSmartContractML.g:1316:1: ( ( '-' )? )
             {
-            // InternalSmartContractML.g:1343:1: ( ( '-' )? )
-            // InternalSmartContractML.g:1344:2: ( '-' )?
+            // InternalSmartContractML.g:1316:1: ( ( '-' )? )
+            // InternalSmartContractML.g:1317:2: ( '-' )?
             {
              before(grammarAccess.getEIntAccess().getHyphenMinusKeyword_0()); 
-            // InternalSmartContractML.g:1345:2: ( '-' )?
+            // InternalSmartContractML.g:1318:2: ( '-' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==25) ) {
+            if ( (LA10_0==24) ) {
                 alt10=1;
             }
             switch (alt10) {
                 case 1 :
-                    // InternalSmartContractML.g:1345:3: '-'
+                    // InternalSmartContractML.g:1318:3: '-'
                     {
-                    match(input,25,FOLLOW_2); 
+                    match(input,24,FOLLOW_2); 
 
                     }
                     break;
@@ -4043,14 +3967,14 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__EInt__Group__1"
-    // InternalSmartContractML.g:1353:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
+    // InternalSmartContractML.g:1326:1: rule__EInt__Group__1 : rule__EInt__Group__1__Impl ;
     public final void rule__EInt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1357:1: ( rule__EInt__Group__1__Impl )
-            // InternalSmartContractML.g:1358:2: rule__EInt__Group__1__Impl
+            // InternalSmartContractML.g:1330:1: ( rule__EInt__Group__1__Impl )
+            // InternalSmartContractML.g:1331:2: rule__EInt__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__EInt__Group__1__Impl();
@@ -4076,17 +4000,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__EInt__Group__1__Impl"
-    // InternalSmartContractML.g:1364:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
+    // InternalSmartContractML.g:1337:1: rule__EInt__Group__1__Impl : ( RULE_INT ) ;
     public final void rule__EInt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1368:1: ( ( RULE_INT ) )
-            // InternalSmartContractML.g:1369:1: ( RULE_INT )
+            // InternalSmartContractML.g:1341:1: ( ( RULE_INT ) )
+            // InternalSmartContractML.g:1342:1: ( RULE_INT )
             {
-            // InternalSmartContractML.g:1369:1: ( RULE_INT )
-            // InternalSmartContractML.g:1370:2: RULE_INT
+            // InternalSmartContractML.g:1342:1: ( RULE_INT )
+            // InternalSmartContractML.g:1343:2: RULE_INT
             {
              before(grammarAccess.getEIntAccess().getINTTerminalRuleCall_1()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -4113,17 +4037,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__SmartContract__NameAssignment_2"
-    // InternalSmartContractML.g:1380:1: rule__SmartContract__NameAssignment_2 : ( ruleEString ) ;
+    // InternalSmartContractML.g:1353:1: rule__SmartContract__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__SmartContract__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1384:1: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1385:2: ( ruleEString )
+            // InternalSmartContractML.g:1357:1: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1358:2: ( ruleEString )
             {
-            // InternalSmartContractML.g:1385:2: ( ruleEString )
-            // InternalSmartContractML.g:1386:3: ruleEString
+            // InternalSmartContractML.g:1358:2: ( ruleEString )
+            // InternalSmartContractML.g:1359:3: ruleEString
             {
              before(grammarAccess.getSmartContractAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4154,21 +4078,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__SmartContract__InitialStateAssignment_3_1"
-    // InternalSmartContractML.g:1395:1: rule__SmartContract__InitialStateAssignment_3_1 : ( ( ruleEString ) ) ;
+    // InternalSmartContractML.g:1368:1: rule__SmartContract__InitialStateAssignment_3_1 : ( ( ruleEString ) ) ;
     public final void rule__SmartContract__InitialStateAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1399:1: ( ( ( ruleEString ) ) )
-            // InternalSmartContractML.g:1400:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1372:1: ( ( ( ruleEString ) ) )
+            // InternalSmartContractML.g:1373:2: ( ( ruleEString ) )
             {
-            // InternalSmartContractML.g:1400:2: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1401:3: ( ruleEString )
+            // InternalSmartContractML.g:1373:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1374:3: ( ruleEString )
             {
              before(grammarAccess.getSmartContractAccess().getInitialStateStateCrossReference_3_1_0()); 
-            // InternalSmartContractML.g:1402:3: ( ruleEString )
-            // InternalSmartContractML.g:1403:4: ruleEString
+            // InternalSmartContractML.g:1375:3: ( ruleEString )
+            // InternalSmartContractML.g:1376:4: ruleEString
             {
              before(grammarAccess.getSmartContractAccess().getInitialStateStateEStringParserRuleCall_3_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4203,17 +4127,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__SmartContract__OwnedEventsAssignment_4"
-    // InternalSmartContractML.g:1414:1: rule__SmartContract__OwnedEventsAssignment_4 : ( ruleEvent ) ;
+    // InternalSmartContractML.g:1387:1: rule__SmartContract__OwnedEventsAssignment_4 : ( ruleEvent ) ;
     public final void rule__SmartContract__OwnedEventsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1418:1: ( ( ruleEvent ) )
-            // InternalSmartContractML.g:1419:2: ( ruleEvent )
+            // InternalSmartContractML.g:1391:1: ( ( ruleEvent ) )
+            // InternalSmartContractML.g:1392:2: ( ruleEvent )
             {
-            // InternalSmartContractML.g:1419:2: ( ruleEvent )
-            // InternalSmartContractML.g:1420:3: ruleEvent
+            // InternalSmartContractML.g:1392:2: ( ruleEvent )
+            // InternalSmartContractML.g:1393:3: ruleEvent
             {
              before(grammarAccess.getSmartContractAccess().getOwnedEventsEventParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -4244,17 +4168,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__SmartContract__OwnedStatesAssignment_5"
-    // InternalSmartContractML.g:1429:1: rule__SmartContract__OwnedStatesAssignment_5 : ( ruleState ) ;
+    // InternalSmartContractML.g:1402:1: rule__SmartContract__OwnedStatesAssignment_5 : ( ruleState ) ;
     public final void rule__SmartContract__OwnedStatesAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1433:1: ( ( ruleState ) )
-            // InternalSmartContractML.g:1434:2: ( ruleState )
+            // InternalSmartContractML.g:1406:1: ( ( ruleState ) )
+            // InternalSmartContractML.g:1407:2: ( ruleState )
             {
-            // InternalSmartContractML.g:1434:2: ( ruleState )
-            // InternalSmartContractML.g:1435:3: ruleState
+            // InternalSmartContractML.g:1407:2: ( ruleState )
+            // InternalSmartContractML.g:1408:3: ruleState
             {
              before(grammarAccess.getSmartContractAccess().getOwnedStatesStateParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -4285,17 +4209,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__SmartContract__OwnedFunctionsAssignment_6"
-    // InternalSmartContractML.g:1444:1: rule__SmartContract__OwnedFunctionsAssignment_6 : ( ruleFunction ) ;
+    // InternalSmartContractML.g:1417:1: rule__SmartContract__OwnedFunctionsAssignment_6 : ( ruleFunction ) ;
     public final void rule__SmartContract__OwnedFunctionsAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1448:1: ( ( ruleFunction ) )
-            // InternalSmartContractML.g:1449:2: ( ruleFunction )
+            // InternalSmartContractML.g:1421:1: ( ( ruleFunction ) )
+            // InternalSmartContractML.g:1422:2: ( ruleFunction )
             {
-            // InternalSmartContractML.g:1449:2: ( ruleFunction )
-            // InternalSmartContractML.g:1450:3: ruleFunction
+            // InternalSmartContractML.g:1422:2: ( ruleFunction )
+            // InternalSmartContractML.g:1423:3: ruleFunction
             {
              before(grammarAccess.getSmartContractAccess().getOwnedFunctionsFunctionParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -4326,17 +4250,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Event__NameAssignment_2"
-    // InternalSmartContractML.g:1459:1: rule__Event__NameAssignment_2 : ( ruleEString ) ;
+    // InternalSmartContractML.g:1432:1: rule__Event__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Event__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1463:1: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1464:2: ( ruleEString )
+            // InternalSmartContractML.g:1436:1: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1437:2: ( ruleEString )
             {
-            // InternalSmartContractML.g:1464:2: ( ruleEString )
-            // InternalSmartContractML.g:1465:3: ruleEString
+            // InternalSmartContractML.g:1437:2: ( ruleEString )
+            // InternalSmartContractML.g:1438:3: ruleEString
             {
              before(grammarAccess.getEventAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4367,21 +4291,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Event__SourceStateAssignment_4"
-    // InternalSmartContractML.g:1474:1: rule__Event__SourceStateAssignment_4 : ( ( ruleEString ) ) ;
+    // InternalSmartContractML.g:1447:1: rule__Event__SourceStateAssignment_4 : ( ( ruleEString ) ) ;
     public final void rule__Event__SourceStateAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1478:1: ( ( ( ruleEString ) ) )
-            // InternalSmartContractML.g:1479:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1451:1: ( ( ( ruleEString ) ) )
+            // InternalSmartContractML.g:1452:2: ( ( ruleEString ) )
             {
-            // InternalSmartContractML.g:1479:2: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1480:3: ( ruleEString )
+            // InternalSmartContractML.g:1452:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1453:3: ( ruleEString )
             {
              before(grammarAccess.getEventAccess().getSourceStateStateCrossReference_4_0()); 
-            // InternalSmartContractML.g:1481:3: ( ruleEString )
-            // InternalSmartContractML.g:1482:4: ruleEString
+            // InternalSmartContractML.g:1454:3: ( ruleEString )
+            // InternalSmartContractML.g:1455:4: ruleEString
             {
              before(grammarAccess.getEventAccess().getSourceStateStateEStringParserRuleCall_4_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4416,21 +4340,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Event__TargetStateAssignment_6"
-    // InternalSmartContractML.g:1493:1: rule__Event__TargetStateAssignment_6 : ( ( ruleEString ) ) ;
+    // InternalSmartContractML.g:1466:1: rule__Event__TargetStateAssignment_6 : ( ( ruleEString ) ) ;
     public final void rule__Event__TargetStateAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1497:1: ( ( ( ruleEString ) ) )
-            // InternalSmartContractML.g:1498:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1470:1: ( ( ( ruleEString ) ) )
+            // InternalSmartContractML.g:1471:2: ( ( ruleEString ) )
             {
-            // InternalSmartContractML.g:1498:2: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1499:3: ( ruleEString )
+            // InternalSmartContractML.g:1471:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1472:3: ( ruleEString )
             {
              before(grammarAccess.getEventAccess().getTargetStateStateCrossReference_6_0()); 
-            // InternalSmartContractML.g:1500:3: ( ruleEString )
-            // InternalSmartContractML.g:1501:4: ruleEString
+            // InternalSmartContractML.g:1473:3: ( ruleEString )
+            // InternalSmartContractML.g:1474:4: ruleEString
             {
              before(grammarAccess.getEventAccess().getTargetStateStateEStringParserRuleCall_6_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4465,17 +4389,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__State__NameAssignment_2"
-    // InternalSmartContractML.g:1512:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
+    // InternalSmartContractML.g:1485:1: rule__State__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__State__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1516:1: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1517:2: ( ruleEString )
+            // InternalSmartContractML.g:1489:1: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1490:2: ( ruleEString )
             {
-            // InternalSmartContractML.g:1517:2: ( ruleEString )
-            // InternalSmartContractML.g:1518:3: ruleEString
+            // InternalSmartContractML.g:1490:2: ( ruleEString )
+            // InternalSmartContractML.g:1491:3: ruleEString
             {
              before(grammarAccess.getStateAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4505,75 +4429,26 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
     // $ANTLR end "rule__State__NameAssignment_2"
 
 
-    // $ANTLR start "rule__State__OutputEventAssignment_3_1"
-    // InternalSmartContractML.g:1527:1: rule__State__OutputEventAssignment_3_1 : ( ( ruleEString ) ) ;
-    public final void rule__State__OutputEventAssignment_3_1() throws RecognitionException {
+    // $ANTLR start "rule__State__OwnedVariablesAssignment_3_2"
+    // InternalSmartContractML.g:1500:1: rule__State__OwnedVariablesAssignment_3_2 : ( ruleVariable ) ;
+    public final void rule__State__OwnedVariablesAssignment_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1531:1: ( ( ( ruleEString ) ) )
-            // InternalSmartContractML.g:1532:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1504:1: ( ( ruleVariable ) )
+            // InternalSmartContractML.g:1505:2: ( ruleVariable )
             {
-            // InternalSmartContractML.g:1532:2: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1533:3: ( ruleEString )
+            // InternalSmartContractML.g:1505:2: ( ruleVariable )
+            // InternalSmartContractML.g:1506:3: ruleVariable
             {
-             before(grammarAccess.getStateAccess().getOutputEventEventCrossReference_3_1_0()); 
-            // InternalSmartContractML.g:1534:3: ( ruleEString )
-            // InternalSmartContractML.g:1535:4: ruleEString
-            {
-             before(grammarAccess.getStateAccess().getOutputEventEventEStringParserRuleCall_3_1_0_1()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getStateAccess().getOutputEventEventEStringParserRuleCall_3_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getStateAccess().getOutputEventEventCrossReference_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__State__OutputEventAssignment_3_1"
-
-
-    // $ANTLR start "rule__State__OwnedVariablesAssignment_6"
-    // InternalSmartContractML.g:1546:1: rule__State__OwnedVariablesAssignment_6 : ( ruleVariable ) ;
-    public final void rule__State__OwnedVariablesAssignment_6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalSmartContractML.g:1550:1: ( ( ruleVariable ) )
-            // InternalSmartContractML.g:1551:2: ( ruleVariable )
-            {
-            // InternalSmartContractML.g:1551:2: ( ruleVariable )
-            // InternalSmartContractML.g:1552:3: ruleVariable
-            {
-             before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_6_0()); 
+             before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_3_2_0()); 
             pushFollow(FOLLOW_2);
             ruleVariable();
 
             state._fsp--;
 
-             after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_6_0()); 
+             after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_3_2_0()); 
 
             }
 
@@ -4592,21 +4467,62 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
         }
         return ;
     }
-    // $ANTLR end "rule__State__OwnedVariablesAssignment_6"
+    // $ANTLR end "rule__State__OwnedVariablesAssignment_3_2"
+
+
+    // $ANTLR start "rule__State__OwnedVariablesAssignment_4"
+    // InternalSmartContractML.g:1515:1: rule__State__OwnedVariablesAssignment_4 : ( ruleVariable ) ;
+    public final void rule__State__OwnedVariablesAssignment_4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalSmartContractML.g:1519:1: ( ( ruleVariable ) )
+            // InternalSmartContractML.g:1520:2: ( ruleVariable )
+            {
+            // InternalSmartContractML.g:1520:2: ( ruleVariable )
+            // InternalSmartContractML.g:1521:3: ruleVariable
+            {
+             before(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_4_0()); 
+            pushFollow(FOLLOW_2);
+            ruleVariable();
+
+            state._fsp--;
+
+             after(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__State__OwnedVariablesAssignment_4"
 
 
     // $ANTLR start "rule__Function__NameAssignment_2"
-    // InternalSmartContractML.g:1561:1: rule__Function__NameAssignment_2 : ( ruleEString ) ;
+    // InternalSmartContractML.g:1530:1: rule__Function__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__Function__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1565:1: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1566:2: ( ruleEString )
+            // InternalSmartContractML.g:1534:1: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1535:2: ( ruleEString )
             {
-            // InternalSmartContractML.g:1566:2: ( ruleEString )
-            // InternalSmartContractML.g:1567:3: ruleEString
+            // InternalSmartContractML.g:1535:2: ( ruleEString )
+            // InternalSmartContractML.g:1536:3: ruleEString
             {
              before(grammarAccess.getFunctionAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4637,21 +4553,21 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__Function__EventAssignment_5_1"
-    // InternalSmartContractML.g:1576:1: rule__Function__EventAssignment_5_1 : ( ( ruleEString ) ) ;
+    // InternalSmartContractML.g:1545:1: rule__Function__EventAssignment_5_1 : ( ( ruleEString ) ) ;
     public final void rule__Function__EventAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1580:1: ( ( ( ruleEString ) ) )
-            // InternalSmartContractML.g:1581:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1549:1: ( ( ( ruleEString ) ) )
+            // InternalSmartContractML.g:1550:2: ( ( ruleEString ) )
             {
-            // InternalSmartContractML.g:1581:2: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1582:3: ( ruleEString )
+            // InternalSmartContractML.g:1550:2: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1551:3: ( ruleEString )
             {
              before(grammarAccess.getFunctionAccess().getEventEventCrossReference_5_1_0()); 
-            // InternalSmartContractML.g:1583:3: ( ruleEString )
-            // InternalSmartContractML.g:1584:4: ruleEString
+            // InternalSmartContractML.g:1552:3: ( ruleEString )
+            // InternalSmartContractML.g:1553:4: ruleEString
             {
              before(grammarAccess.getFunctionAccess().getEventEventEStringParserRuleCall_5_1_0_1()); 
             pushFollow(FOLLOW_2);
@@ -4686,17 +4602,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__NameAssignment_2"
-    // InternalSmartContractML.g:1595:1: rule__IntegerVariable__NameAssignment_2 : ( ruleEString ) ;
+    // InternalSmartContractML.g:1564:1: rule__IntegerVariable__NameAssignment_2 : ( ruleEString ) ;
     public final void rule__IntegerVariable__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1599:1: ( ( ruleEString ) )
-            // InternalSmartContractML.g:1600:2: ( ruleEString )
+            // InternalSmartContractML.g:1568:1: ( ( ruleEString ) )
+            // InternalSmartContractML.g:1569:2: ( ruleEString )
             {
-            // InternalSmartContractML.g:1600:2: ( ruleEString )
-            // InternalSmartContractML.g:1601:3: ruleEString
+            // InternalSmartContractML.g:1569:2: ( ruleEString )
+            // InternalSmartContractML.g:1570:3: ruleEString
             {
              before(grammarAccess.getIntegerVariableAccess().getNameEStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -4727,17 +4643,17 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
 
 
     // $ANTLR start "rule__IntegerVariable__InitialValueAssignment_3_1"
-    // InternalSmartContractML.g:1610:1: rule__IntegerVariable__InitialValueAssignment_3_1 : ( ruleEInt ) ;
+    // InternalSmartContractML.g:1579:1: rule__IntegerVariable__InitialValueAssignment_3_1 : ( ruleEInt ) ;
     public final void rule__IntegerVariable__InitialValueAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSmartContractML.g:1614:1: ( ( ruleEInt ) )
-            // InternalSmartContractML.g:1615:2: ( ruleEInt )
+            // InternalSmartContractML.g:1583:1: ( ( ruleEInt ) )
+            // InternalSmartContractML.g:1584:2: ( ruleEInt )
             {
-            // InternalSmartContractML.g:1615:2: ( ruleEInt )
-            // InternalSmartContractML.g:1616:3: ruleEInt
+            // InternalSmartContractML.g:1584:2: ( ruleEInt )
+            // InternalSmartContractML.g:1585:3: ruleEInt
             {
              before(grammarAccess.getIntegerVariableAccess().getInitialValueEIntParserRuleCall_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -4775,22 +4691,22 @@ public class InternalSmartContractMLParser extends AbstractInternalContentAssist
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000800L});
     public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000113000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000093000L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000002002L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000010002L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000100002L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000080002L});
     public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x00000000000A0000L});
-    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000002000040L});
+    public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000420000L});
+    public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000001000040L});
 
 }

@@ -4,7 +4,7 @@
     <semanticResources>test1.smartc</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_jKocYHdbEeu_FMpFgPFZtg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jLKn4HdbEeu_FMpFgPFZtg" name="SmartContract" repPath="#_jKy0cHdbEeu_FMpFgPFZtg" changeId="d0591065-3a2e-4e11-a59b-0a164afecbe1">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jLKn4HdbEeu_FMpFgPFZtg" name="SmartContract" repPath="#_jKy0cHdbEeu_FMpFgPFZtg" changeId="509c50c5-f867-4fea-8f65-aa97945a6f3c">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']"/>
         <target xmi:type="simplelanguage:SmartContract" href="test1.smartc#/"/>
       </ownedRepresentationDescriptors>
@@ -66,7 +66,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gVUp4ndgEeu_0YbOiujHMQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_gVOjQXdgEeu_0YbOiujHMQ" fontColor="7490599" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gVOjQndgEeu_0YbOiujHMQ" x="612" y="216" width="80" height="80"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gVOjQndgEeu_0YbOiujHMQ" x="564" y="204" width="80" height="80"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_jLbtoXdbEeu_FMpFgPFZtg"/>
         <edges xmi:type="notation:Edge" xmi:id="_4foZIHddEeu8r8ghXc4bRQ" type="4001" element="_4fhEYHddEeu8r8ghXc4bRQ" source="_jMVskHdbEeu_FMpFgPFZtg" target="_jMI4QHdbEeu_FMpFgPFZtg">
@@ -131,6 +131,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_gU3W4HdgEeu_0YbOiujHMQ" name="zaza" width="8" height="8" resizeKind="NSEW">
       <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.2"/>
       <semanticElements xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_gU-EkHdgEeu_0YbOiujHMQ" labelSize="12" showIcon="false" labelColor="39,76,114" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" labelPosition="node" color="194,239,255">
         <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@style"/>
       </ownedStyle>

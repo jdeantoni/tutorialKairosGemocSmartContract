@@ -210,26 +210,22 @@ public class SmartContractMLGrammarAccess extends AbstractElementFinder.Abstract
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cOutputEventKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cOutputEventAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cOutputEventEventCrossReference_3_1_0 = (CrossReference)cOutputEventAssignment_3_1.eContents().get(0);
-		private final RuleCall cOutputEventEventEStringParserRuleCall_3_1_0_1 = (RuleCall)cOutputEventEventCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cVarKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cOwnedVariablesAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cOwnedVariablesVariableParserRuleCall_6_0 = (RuleCall)cOwnedVariablesAssignment_6.eContents().get(0);
+		private final Keyword cVarKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cColonKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cOwnedVariablesAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cOwnedVariablesVariableParserRuleCall_3_2_0 = (RuleCall)cOwnedVariablesAssignment_3_2.eContents().get(0);
+		private final Assignment cOwnedVariablesAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cOwnedVariablesVariableParserRuleCall_4_0 = (RuleCall)cOwnedVariablesAssignment_4.eContents().get(0);
 		
 		//State:
 		//	{State}
 		//	'State'
-		//	name=EString ('outputEvent' outputEvent=[Event|EString])?
-		//	'var' ':' ownedVariables+=Variable*;
+		//	name=EString ('var' ':' ownedVariables+=Variable)? ownedVariables+=Variable*;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{State}
 		//'State'
-		//name=EString ('outputEvent' outputEvent=[Event|EString])?
-		//'var' ':' ownedVariables+=Variable*
+		//name=EString ('var' ':' ownedVariables+=Variable)? ownedVariables+=Variable*
 		public Group getGroup() { return cGroup; }
 		
 		//{State}
@@ -244,32 +240,26 @@ public class SmartContractMLGrammarAccess extends AbstractElementFinder.Abstract
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 		
-		//('outputEvent' outputEvent=[Event|EString])?
+		//('var' ':' ownedVariables+=Variable)?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'outputEvent'
-		public Keyword getOutputEventKeyword_3_0() { return cOutputEventKeyword_3_0; }
-		
-		//outputEvent=[Event|EString]
-		public Assignment getOutputEventAssignment_3_1() { return cOutputEventAssignment_3_1; }
-		
-		//[Event|EString]
-		public CrossReference getOutputEventEventCrossReference_3_1_0() { return cOutputEventEventCrossReference_3_1_0; }
-		
-		//EString
-		public RuleCall getOutputEventEventEStringParserRuleCall_3_1_0_1() { return cOutputEventEventEStringParserRuleCall_3_1_0_1; }
-		
 		//'var'
-		public Keyword getVarKeyword_4() { return cVarKeyword_4; }
+		public Keyword getVarKeyword_3_0() { return cVarKeyword_3_0; }
 		
 		//':'
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		public Keyword getColonKeyword_3_1() { return cColonKeyword_3_1; }
 		
-		//ownedVariables+=Variable*
-		public Assignment getOwnedVariablesAssignment_6() { return cOwnedVariablesAssignment_6; }
+		//ownedVariables+=Variable
+		public Assignment getOwnedVariablesAssignment_3_2() { return cOwnedVariablesAssignment_3_2; }
 		
 		//Variable
-		public RuleCall getOwnedVariablesVariableParserRuleCall_6_0() { return cOwnedVariablesVariableParserRuleCall_6_0; }
+		public RuleCall getOwnedVariablesVariableParserRuleCall_3_2_0() { return cOwnedVariablesVariableParserRuleCall_3_2_0; }
+		
+		//ownedVariables+=Variable*
+		public Assignment getOwnedVariablesAssignment_4() { return cOwnedVariablesAssignment_4; }
+		
+		//Variable
+		public RuleCall getOwnedVariablesVariableParserRuleCall_4_0() { return cOwnedVariablesVariableParserRuleCall_4_0; }
 	}
 	public class FunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.inria.kairos.tuto.simplelanguage.xtext.SmartContractML.Function");
@@ -507,8 +497,7 @@ public class SmartContractMLGrammarAccess extends AbstractElementFinder.Abstract
 	//State:
 	//	{State}
 	//	'State'
-	//	name=EString ('outputEvent' outputEvent=[Event|EString])?
-	//	'var' ':' ownedVariables+=Variable*;
+	//	name=EString ('var' ':' ownedVariables+=Variable)? ownedVariables+=Variable*;
 	public StateElements getStateAccess() {
 		return pState;
 	}

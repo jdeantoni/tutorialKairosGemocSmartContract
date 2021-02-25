@@ -74,8 +74,8 @@ public class SmartContractMLSemanticSequencer extends AbstractDelegatingSemantic
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getEventAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getEventAccess().getSourceStateStateEStringParserRuleCall_4_0_1(), semanticObject.eGet(SimplelanguagePackage.Literals.EVENT__SOURCE_STATE, false));
-		feeder.accept(grammarAccess.getEventAccess().getTargetStateStateEStringParserRuleCall_6_0_1(), semanticObject.eGet(SimplelanguagePackage.Literals.EVENT__TARGET_STATE, false));
+		feeder.accept(grammarAccess.getEventAccess().getSourceStateStateEStringParserRuleCall_4_0_1(), semanticObject.getSourceState());
+		feeder.accept(grammarAccess.getEventAccess().getTargetStateStateEStringParserRuleCall_6_0_1(), semanticObject.getTargetState());
 		feeder.finish();
 	}
 	
@@ -122,7 +122,7 @@ public class SmartContractMLSemanticSequencer extends AbstractDelegatingSemantic
 	 *     State returns State
 	 *
 	 * Constraint:
-	 *     (name=EString outputEvent=[Event|EString]? ownedVariables+=Variable*)
+	 *     (name=EString ownedVariables+=Variable? ownedVariables+=Variable*)
 	 */
 	protected void sequence_State(ISerializationContext context, State semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

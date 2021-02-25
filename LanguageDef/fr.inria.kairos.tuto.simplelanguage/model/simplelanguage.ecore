@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ecore:EPackage [
-<!ENTITY _0 "http://www.eclipse.org/emf/2002/Ecore">
-]>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simplelanguage" nsURI="http://www.inria.fr/teams/kairos/simplelanguage"
     nsPrefix="simplelanguage">
@@ -24,9 +21,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetState" eType="#//State"
-        eOpposite="#//State/inputEvent"/>
+        resolveProxies="false" eOpposite="#//State/inputEvent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceState" eType="#//State"
-        eOpposite="#//State/outputEvent"/>
+        resolveProxies="false" eOpposite="#//State/outputEvent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="event" eType="#//Event"/>
@@ -35,14 +32,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ownedVariables" upperBound="-1"
         eType="#//Variable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputEvent" eType="#//Event"
-        eOpposite="#//Event/targetState"/>
+        transient="true" eOpposite="#//Event/targetState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputEvent" eType="#//Event"
-        eOpposite="#//Event/sourceState"/>
+        transient="true" eOpposite="#//Event/sourceState"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="IntegerVariable" eSuperTypes="#//Variable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="initialValue" lowerBound="1"
-        eType="ecore:EDataType &_0;#//EInt"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -51,6 +48,6 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="namesAreLong" value="&#xA;&#x9;&#x9;&#x9;self.name.size() > 3 "/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType &_0;#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

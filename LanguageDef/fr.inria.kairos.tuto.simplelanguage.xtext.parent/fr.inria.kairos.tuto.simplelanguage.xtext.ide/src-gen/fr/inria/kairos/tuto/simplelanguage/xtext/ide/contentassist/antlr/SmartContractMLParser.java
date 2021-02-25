@@ -51,8 +51,8 @@ public class SmartContractMLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getEventAccess().getSourceStateAssignment_4(), "rule__Event__SourceStateAssignment_4");
 			builder.put(grammarAccess.getEventAccess().getTargetStateAssignment_6(), "rule__Event__TargetStateAssignment_6");
 			builder.put(grammarAccess.getStateAccess().getNameAssignment_2(), "rule__State__NameAssignment_2");
-			builder.put(grammarAccess.getStateAccess().getOutputEventAssignment_3_1(), "rule__State__OutputEventAssignment_3_1");
-			builder.put(grammarAccess.getStateAccess().getOwnedVariablesAssignment_6(), "rule__State__OwnedVariablesAssignment_6");
+			builder.put(grammarAccess.getStateAccess().getOwnedVariablesAssignment_3_2(), "rule__State__OwnedVariablesAssignment_3_2");
+			builder.put(grammarAccess.getStateAccess().getOwnedVariablesAssignment_4(), "rule__State__OwnedVariablesAssignment_4");
 			builder.put(grammarAccess.getFunctionAccess().getNameAssignment_2(), "rule__Function__NameAssignment_2");
 			builder.put(grammarAccess.getFunctionAccess().getEventAssignment_5_1(), "rule__Function__EventAssignment_5_1");
 			builder.put(grammarAccess.getIntegerVariableAccess().getNameAssignment_2(), "rule__IntegerVariable__NameAssignment_2");

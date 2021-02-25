@@ -383,41 +383,40 @@ ruleState returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_3='outputEvent'
+			otherlv_3='var'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getStateAccess().getOutputEventKeyword_3_0());
+				newLeafNode(otherlv_3, grammarAccess.getStateAccess().getVarKeyword_3_0());
+			}
+			otherlv_4=':'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getStateAccess().getColonKeyword_3_1());
 			}
 			(
 				(
 					{
+						newCompositeNode(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_3_2_0());
+					}
+					lv_ownedVariables_5_0=ruleVariable
+					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getStateRule());
+							$current = createModelElementForParent(grammarAccess.getStateRule());
 						}
-					}
-					{
-						newCompositeNode(grammarAccess.getStateAccess().getOutputEventEventCrossReference_3_1_0());
-					}
-					ruleEString
-					{
+						add(
+							$current,
+							"ownedVariables",
+							lv_ownedVariables_5_0,
+							"fr.inria.kairos.tuto.simplelanguage.xtext.SmartContractML.Variable");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_5='var'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getStateAccess().getVarKeyword_4());
-		}
-		otherlv_6=':'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getStateAccess().getColonKeyword_5());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getStateAccess().getOwnedVariablesVariableParserRuleCall_4_0());
 				}
-				lv_ownedVariables_7_0=ruleVariable
+				lv_ownedVariables_6_0=ruleVariable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getStateRule());
@@ -425,7 +424,7 @@ ruleState returns [EObject current=null]
 					add(
 						$current,
 						"ownedVariables",
-						lv_ownedVariables_7_0,
+						lv_ownedVariables_6_0,
 						"fr.inria.kairos.tuto.simplelanguage.xtext.SmartContractML.Variable");
 					afterParserOrEnumRuleCall();
 				}
