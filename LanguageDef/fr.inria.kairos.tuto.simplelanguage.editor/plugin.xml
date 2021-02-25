@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated simplelanguage -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.inria.kairos.tuto.simplelanguage.presentation.SimplelanguageModelWizardID"
+            name="%_UI_SimplelanguageModelWizard_label"
+            class="fr.inria.kairos.tuto.simplelanguage.presentation.SimplelanguageModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimplelanguageModelFile.gif">
+         <description>%_UI_SimplelanguageModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated simplelanguage -->
+      <editor
+            id="fr.inria.kairos.tuto.simplelanguage.presentation.SimplelanguageEditorID"
+            name="%_UI_SimplelanguageEditor_label"
+            icon="icons/full/obj16/SimplelanguageModelFile.gif"
+            extensions="simplelanguage"
+            class="fr.inria.kairos.tuto.simplelanguage.presentation.SimplelanguageEditor"
+            contributorClass="fr.inria.kairos.tuto.simplelanguage.presentation.SimplelanguageActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
