@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplelanguage:SmartContract xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:simplelanguage="http://www.inria.fr/teams/kairos/simplelanguage" name="sc1" initialState="//@ownedStates.0">
+  <ownedEvents name="e1" targetState="//@ownedStates.0" sourceState="//@ownedStates.0"/>
+  <ownedStates name="s1" inputEvent="//@ownedEvents.0" outputEvent="//@ownedEvents.0"/>
+  <ownedStates name="s2"/>
+  <ownedFunctions name="f1" event="//@ownedEvents.0"/>
+</simplelanguage:SmartContract>

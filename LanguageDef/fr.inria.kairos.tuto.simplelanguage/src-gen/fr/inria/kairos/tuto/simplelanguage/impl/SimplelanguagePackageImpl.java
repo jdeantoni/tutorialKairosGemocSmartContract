@@ -12,11 +12,13 @@ import fr.inria.kairos.tuto.simplelanguage.SmartContract;
 import fr.inria.kairos.tuto.simplelanguage.State;
 import fr.inria.kairos.tuto.simplelanguage.Variable;
 
+import fr.inria.kairos.tuto.simplelanguage.util.SimplelanguageValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -130,6 +132,13 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 
 		// Initialize created meta-data
 		theSimplelanguagePackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put(theSimplelanguagePackage, new EValidator.Descriptor() {
+			public EValidator getEValidator() {
+				return SimplelanguageValidator.INSTANCE;
+			}
+		});
 
 		// Mark meta-data to indicate it can't be changed
 		theSimplelanguagePackage.freeze();
@@ -447,7 +456,7 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 
 		initEClass(integerVariableEClass, IntegerVariable.class, "IntegerVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerVariable_InitialValue(), ecorePackage.getEInt(), "initialValue", null, 0, 1,
+		initEAttribute(getIntegerVariable_InitialValue(), ecorePackage.getEInt(), "initialValue", null, 1, 1,
 				IntegerVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -458,6 +467,51 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/OCL/Import
+		createImportAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createImportAnnotations() {
+		String source = "http://www.eclipse.org/OCL/Import";
+		addAnnotation(this, source, new String[] { "ecore", "http://www.eclipse.org/emf/2002/Ecore" });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";
+		addAnnotation(this, source,
+				new String[] { "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+						"settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", "validationDelegates",
+						"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot" });
+		addAnnotation(namedElementEClass, source, new String[] { "constraints", "namesAreLong" });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";
+		addAnnotation(namedElementEClass, source, new String[] { "namesAreLong", "\n\t\t\tself.name.size() > 3 " });
 	}
 
 } //SimplelanguagePackageImpl

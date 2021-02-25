@@ -1,0 +1,13 @@
+SmartContract zaza
+	-> s111
+	Event e111 from s111 to s2222
+	Event e222 from s2222 to s111 
+	State s111 
+		outputEvent e111
+		var : 
+			int theVar = 0
+	State s2222
+		outputEvent e222
+		 var : 
+			int anotherVar = 0
+	State zaza var :

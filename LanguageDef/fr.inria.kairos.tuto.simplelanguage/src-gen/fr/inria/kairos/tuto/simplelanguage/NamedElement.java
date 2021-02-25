@@ -18,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see fr.inria.kairos.tuto.simplelanguage.SimplelanguagePackage#getNamedElement()
  * @model abstract="true"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='namesAreLong'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot namesAreLong='\n\t\t\tself.name.size() &gt; 3 '"
  * @generated
  */
 public interface NamedElement extends EObject {

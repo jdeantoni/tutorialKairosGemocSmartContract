@@ -26,7 +26,7 @@ public interface IntegerVariable extends Variable {
 	 * @return the value of the '<em>Initial Value</em>' attribute.
 	 * @see #setInitialValue(int)
 	 * @see fr.inria.kairos.tuto.simplelanguage.SimplelanguagePackage#getIntegerVariable_InitialValue()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getInitialValue();
