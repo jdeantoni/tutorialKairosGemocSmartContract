@@ -4,6 +4,7 @@ package fr.inria.kairos.tuto.simplelanguage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -215,13 +216,22 @@ public interface SimplelanguagePackage extends EPackage {
 	int EVENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Fire</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVENT___FIRE = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Event</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+	int EVENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link fr.inria.kairos.tuto.simplelanguage.impl.FunctionImpl <em>Function</em>}' class.
@@ -503,6 +513,16 @@ public interface SimplelanguagePackage extends EPackage {
 	EReference getEvent_SourceState();
 
 	/**
+	 * Returns the meta object for the '{@link fr.inria.kairos.tuto.simplelanguage.Event#fire() <em>Fire</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Fire</em>' operation.
+	 * @see fr.inria.kairos.tuto.simplelanguage.Event#fire()
+	 * @generated
+	 */
+	EOperation getEvent__Fire();
+
+	/**
 	 * Returns the meta object for class '{@link fr.inria.kairos.tuto.simplelanguage.Function <em>Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -708,6 +728,14 @@ public interface SimplelanguagePackage extends EPackage {
 		 * @generated
 		 */
 		EReference EVENT__SOURCE_STATE = eINSTANCE.getEvent_SourceState();
+
+		/**
+		 * The meta object literal for the '<em><b>Fire</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EVENT___FIRE = eINSTANCE.getEvent__Fire();
 
 		/**
 		 * The meta object literal for the '{@link fr.inria.kairos.tuto.simplelanguage.impl.FunctionImpl <em>Function</em>}' class.

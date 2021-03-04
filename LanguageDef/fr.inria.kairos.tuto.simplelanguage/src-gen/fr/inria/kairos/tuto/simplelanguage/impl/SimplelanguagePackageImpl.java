@@ -15,6 +15,7 @@ import fr.inria.kairos.tuto.simplelanguage.Variable;
 import fr.inria.kairos.tuto.simplelanguage.util.SimplelanguageValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -225,6 +226,15 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getEvent__Fire() {
+		return eventEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFunction() {
 		return functionEClass;
 	}
@@ -357,6 +367,7 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 		eventEClass = createEClass(EVENT);
 		createEReference(eventEClass, EVENT__TARGET_STATE);
 		createEReference(eventEClass, EVENT__SOURCE_STATE);
+		createEOperation(eventEClass, EVENT___FIRE);
 
 		functionEClass = createEClass(FUNCTION);
 		createEReference(functionEClass, FUNCTION__EVENT);
@@ -434,6 +445,8 @@ public class SimplelanguagePackageImpl extends EPackageImpl implements Simplelan
 		initEReference(getEvent_SourceState(), this.getState(), this.getState_OutputEvent(), "sourceState", null, 0, 1,
 				Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getEvent__Fire(), null, "fire", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

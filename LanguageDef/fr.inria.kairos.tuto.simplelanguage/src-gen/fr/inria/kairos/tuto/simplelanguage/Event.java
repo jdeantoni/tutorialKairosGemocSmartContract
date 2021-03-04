@@ -68,4 +68,12 @@ public interface Event extends NamedElement {
 	 */
 	void setSourceState(State value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	void fire();
+
 } // Event

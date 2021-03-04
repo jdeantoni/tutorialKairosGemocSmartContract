@@ -1,0 +1,21 @@
+digraph {
+	rankdir=LR;
+	start=0;
+	node [style="filled"]
+
+	0 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="1939284784"];
+	1 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="480606944"];
+	2 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="1738184880"];
+	3 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="1152190789"];
+	4 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="904687796"];
+	5 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="1209363114"];
+	6 [fillcolor="#ffffff", size="10", shape="circle", fontcolor="black", label="545149919"];
+
+	0 -> 1 [penwidth="1", color="#aaaaaa", style="solid", label="[s1En]"];
+	1 -> 2 [penwidth="1", color="#aaaaaa", style="solid", label="[s1Ex, e2F]"];
+	2 -> 3 [penwidth="1", color="#aaaaaa", style="solid", label="[s2En]"];
+	3 -> 4 [penwidth="1", color="#aaaaaa", style="solid", label="[s2Ex, e1F]"];
+	4 -> 5 [penwidth="1", color="#aaaaaa", style="solid", label="[s1En]"];
+	5 -> 6 [penwidth="1", color="#aaaaaa", style="solid", label="[s1Ex, e2F]"];
+	6 -> 3 [penwidth="1", color="#aaaaaa", style="solid", label="[s2En]"];
+}

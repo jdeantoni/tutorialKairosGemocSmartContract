@@ -1,0 +1,42 @@
+/*
+ * CCSL specification
+ * @author:  jdeanton
+ * date :  Thu March 4 2021  09:39:32 CET 
+ */
+ClockConstraintSystem simple {
+    imports {
+        // import statements
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib" as lib0; 
+		import "platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib" as lib1; 
+		import "./test1.smartc" as model;
+    }
+    entryBlock main
+     
+        Block main {
+        	
+        	Clock s1En-> e1("zaza::s1111")
+        	Clock s1Ex-> e11("zaza::s1111")
+        	Clock s2En-> e2("zaza::s2222")
+        	Clock s2Ex-> e222("zaza::s2222")
+        	Clock e1F-> ee1("zaza::e111")
+        	Clock e2F-> ee2("zaza::e222")
+        	
+        	Expression s1EnButFirst=DelayFor( DelayForClockToDelay -> s1En 	,
+        									  DelayForClockForCounting -> s1En 	,
+        									  DelayForDelay -> one
+        	)
+
+        	
+			Relation relation_0[Alternates](   AlternatesLeftClock-> s1En ,	AlternatesRightClock -> s1Ex  )
+			Relation relation_1[Alternates](   AlternatesLeftClock -> s2En ,	AlternatesRightClock -> s2Ex  )
+			Relation relation_2[Precedes](   LeftClock -> e2F ,	RightClock -> s2En  )
+			Relation relation_3[Coincides](   Clock1 -> s1Ex ,	Clock2 -> e2F  )
+			Relation relation_4[Coincides](   Clock1 -> s2Ex ,	Clock2 -> e1F  )
+			
+			Relation relation_5[Precedes](   LeftClock -> e1F ,	RightClock -> s1EnButFirst  )
+
+
+
+		
+	}
+}

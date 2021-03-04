@@ -1,0 +1,408 @@
+import org.eclipse.gemoc.moccml_mapping.EclQVToHelper;
+modeltype Ecore uses 'http://www.eclipse.org/emf/2002/Ecore';
+	modeltype inMM1 uses 'http://www.inria.fr/teams/kairos/simplelanguage';
+
+modeltype QVT 		uses 'http://www.eclipse.org/QVT/1.0.0/Operational';
+modeltype TimeModel uses 'http://fr.inria.aoste.timemodel';
+modeltype FeedBack 	uses 'http://timesquare.inria.fr/feedback';
+modeltype Priority  uses 'http://fr.inria.aoste.timesquare.ccslkernel.solver.priorities';
+
+transformation dosimplelanguage_To_CCSL(in inM : inMM1, out ccsl : TimeModel, out feedback : FeedBack, out priority: Priority);
+
+property thePrioritySpec		:Priority::PrioritySpecification = null;
+property theFeedBackSpec		:FeedBack::ActionModel = null;
+property seqOfMSE :	Sequence(FeedBack::ModelSpecificEvent)    = Sequence{};
+property theCCSLSpec			:TimeModel::CCSLModel::ClockConstraintSystem = null;
+property theMainBlock			:TimeModel::CCSLModel::Block				 = null;
+property Kernel_Integer 	: TimeModel::BasicType::Type		= null;
+property Kernel_Clock_Type 	: TimeModel::BasicType::Type		= null;
+property seqOfRelationDeclaration :	Sequence(TimeModel::CCSLModel::ClockExpressionAndRelation::RelationDeclaration)    = Sequence{};
+property seqOfAbstractEntity :		Sequence(TimeModel::CCSLModel::ClockExpressionAndRelation::AbstractEntity)    = Sequence{};
+property seqOfExpressionDeclaration :	Sequence(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration)    = Sequence{};
+property allVarDefs : Sequence(String) = Sequence{}; 
+
+query identifyUserRelations() {
+	var kernelTypes :  	Sequence(TimeModel::BasicType::Type) := Sequence{};
+	seqOfRelationDeclaration		+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::RelationDeclaration];
+	seqOfAbstractEntity				+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::AbstractEntity];
+	seqOfExpressionDeclaration		+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration];
+	kernelTypes 					+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib")[TimeModel::BasicType::Type];
+	seqOfRelationDeclaration		+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::RelationDeclaration];
+	seqOfAbstractEntity				+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::AbstractEntity];
+	seqOfExpressionDeclaration		+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib")[TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration];
+	kernelTypes 					+= getLibObjects("platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib")[TimeModel::BasicType::Type];
+
+	Kernel_Integer 					:= kernelTypes[name='int']->asSequence()->first();
+	Kernel_Clock_Type				:= kernelTypes[name='clock']->asSequence()->first();	
+	return;
+}
+
+
+//usefull function :)
+	mapping Real::Real2Integer(n: String) :TimeModel::BasicType::IntegerElement {
+		name:= n;
+		type:= Kernel_Integer;
+		value := self.round();
+
+		end{
+			theMainBlock.elements += result;
+		}
+	}
+
+main() {
+	identifyUserRelations();
+	inM.rootObjects()[inMM1::SmartContract]->asSequence()->first()-> map simplelanguage2CCSL();
+	inM.rootObjects()[inMM1::SmartContract]->asSequence()->first()-> map simplelanguage2FeedBack();
+	inM.rootObjects()[inMM1::SmartContract]->asSequence()->first()-> map simplelanguage2Priority();
+}
+
+			
+	mapping inMM1::SmartContract::simplelanguage2CCSL() : TimeModel::CCSLModel::ClockConstraintSystem {
+	    theCCSLSpec := result;
+	    name := getNameOrUID(self.oclAsType(EObject));
+	    theMainBlock :=object TimeModel::CCSLModel::Block{
+	    	name := "mainBlock";
+	    };
+	    subBlock += theMainBlock;
+	    result.superBlock := theMainBlock;
+		
+		var anEmptyBlock :=object TimeModel::CCSLModel::Block{
+	    	name := "emptyBlock";
+	    };
+	    subBlock += anEmptyBlock;
+		
+		imports+= object TimeModel::ImportStatement{
+			importURI := 'platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/kernel.ccslLib';
+			alias := 'kernel';
+			
+		}; 
+		imports+= object TimeModel::ImportStatement{
+			importURI := 'platform:/plugin/fr.inria.aoste.timesquare.ccslkernel.model/ccsllibrary/CCSL.ccslLib';
+			alias := 'CCSL';
+			
+		}; 
+	
+		imports+= object TimeModel::ImportStatement{
+			importURI := getModelPath(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
+			alias := getModelAlias(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
+			
+		};
+		imports+= object TimeModel::ImportStatement{
+			importURI := getModelPath(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
+			alias := getModelAlias(inM.rootObjects()->asSequence()->first().oclAsType(EObject));
+			
+		};
+
+		
+
+		////[ State ]
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), State.oclAsType(EClass)).oclAsType(State)->map enterIt2Clock();
+		////[ State ]
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), State.oclAsType(EClass)).oclAsType(State)->map leaveIt2Clock();
+		
+
+
+		
+
+		////[ Event ]
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Event.oclAsType(EClass)).oclAsType(Event)->map occurs2Clock();
+		
+
+
+		
+
+		
+
+
+		
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), State.oclAsType(EClass)).oclAsType(State)->map enterBeforeLeavingNonRentrant12enterBeforeLeavingNonRentrant();
+		
+		
+
+		
+
+
+		
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Event.oclAsType(EClass)).oclAsType(Event)->map occursMeansLeavingSourceState12occursMeansLeavingSourceState();
+		
+		
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Event.oclAsType(EClass)).oclAsType(Event)->map occursMeansEnteringLaterInTargetState_notForInitialState22occursMeansEnteringLaterInTargetState_notForInitialState();
+		
+		
+		getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Event.oclAsType(EClass)).oclAsType(Event)->map occursMeansEnteringLaterInTargetState_initialState42occursMeansEnteringLaterInTargetState_initialState();
+		
+	}
+
+
+
+
+
+//create the expressions...
+
+	mapping inMM1::Event::targetEnterDelayedByOne2Expression():TimeModel::CCSLModel::ClockExpressionAndRelation::Expression
+	{
+		name := getNameOrUID(self.oclAsType(EObject))+'_DelayFor_targetEnterDelayedByOne';
+		type := seqOfExpressionDeclaration->select(rd | rd.name = "DelayFor")->first();
+		//from defs
+		
+		//from lets
+				var theDelay : Integer := 1;
+		
+
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.targetState.oclAsType(EObject))+'_enterIt']->first();
+					_abstract := seqOfAbstractEntity[name = 'DelayForClockToDelay' and container().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration).name = 'DelayFor']->first();
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.targetState.oclAsType(EObject))+'_enterIt']->first();
+					_abstract := seqOfAbstractEntity[name = 'DelayForClockForCounting' and container().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration).name = 'DelayFor']->first();
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+								bindable := 1 -> map Real2Integer(getNameOrUID(self.oclAsType(EObject))+getNameOrUID(self.oclAsType(EObject))+"_1")->asSequence()->first();
+					_abstract := seqOfAbstractEntity[name = 'DelayForDelay' and container().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::ExpressionDeclaration).name = 'DelayFor']->first();
+				};
+		end{
+			theMainBlock.expressions += result;
+		}
+	}
+
+
+
+	 	mapping inMM1::State::enterIt2Clock() :TimeModel::Clock 
+		{
+			name:= getNameOrUID(self.oclAsType(EObject))+'_enterIt';
+			tickingEvent := object TimeModel::Event{
+ 				referencedObjectRefs += self.oclAsType(EObject);
+			
+				name := 'evt_'+getNameOrUID(self.oclAsType(EObject))+'_enterIt';
+			kind :=TimeModel::EventKind::undefined;
+						
+			};
+			type:= Kernel_Clock_Type;
+
+			end{
+				theMainBlock.elements += result;
+			}
+		}
+	 	mapping inMM1::State::leaveIt2Clock() :TimeModel::Clock 
+		{
+			name:= getNameOrUID(self.oclAsType(EObject))+'_leaveIt';
+			tickingEvent := object TimeModel::Event{
+ 				referencedObjectRefs += self.oclAsType(EObject);
+			
+				name := 'evt_'+getNameOrUID(self.oclAsType(EObject))+'_leaveIt';
+			kind :=TimeModel::EventKind::undefined;
+						
+			};
+			type:= Kernel_Clock_Type;
+
+			end{
+				theMainBlock.elements += result;
+			}
+		}
+
+//relation stuff		
+	 	mapping inMM1::Event::occurs2Clock() :TimeModel::Clock 
+		{
+			name:= getNameOrUID(self.oclAsType(EObject))+'_occurs';
+			tickingEvent := object TimeModel::Event{
+ 				referencedObjectRefs += self.oclAsType(EObject);
+				//referencedObjectRefs += self.oclAsType(EObject);
+				referencedObjectRefs += self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "fire")->first().oclAsType(EObject);
+			
+				name := 'evt_'+getNameOrUID(self.oclAsType(EObject))+'_occurs';
+			kind :=TimeModel::EventKind::undefined;
+						
+			};
+			type:= Kernel_Clock_Type;
+
+			end{
+				theMainBlock.elements += result;
+			}
+		}
+
+//relation stuff		
+
+//relation stuff		
+	
+		mapping inMM1::State::enterBeforeLeavingNonRentrant12enterBeforeLeavingNonRentrant(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
+		{
+		 	name := getNameOrUID(self.oclAsType(EObject))+"Alternates_enterBeforeLeavingNonRentrant";
+			type := seqOfRelationDeclaration->select(rd | rd.name = "Alternates")->first();
+			
+			
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.oclAsType(EObject))+'_enterIt']->first();
+					_abstract := seqOfAbstractEntity[name = 'AlternatesLeftClock']->first();
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.oclAsType(EObject))+'_leaveIt']->first();
+					_abstract := seqOfAbstractEntity[name = 'AlternatesRightClock']->first();
+				};
+		
+		theMainBlock.relations += result;
+		}
+		
+
+//relation stuff		
+	
+		mapping inMM1::Event::occursMeansLeavingSourceState12occursMeansLeavingSourceState(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
+		{
+		 	name := getNameOrUID(self.oclAsType(EObject))+"Coincides_occursMeansLeavingSourceState";
+			type := seqOfRelationDeclaration->select(rd | rd.name = "Coincides")->first();
+			
+			
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.oclAsType(EObject))+'_occurs']->first();
+					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.sourceState.oclAsType(EObject))+'_leaveIt']->first();
+					_abstract := seqOfRelationDeclaration[name = 'Coincides']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
+				};
+		
+		theMainBlock.relations += result;
+		}
+		
+	
+		mapping inMM1::Event::occursMeansEnteringLaterInTargetState_notForInitialState22occursMeansEnteringLaterInTargetState_notForInitialState(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
+			when { 
+				
+				(self.oclAsType(ecore::EObject).eContainer().oclAsType(SmartContract).initialState
+  			<>
+  		 self.targetState
+  		) 
+				
+}
+		{
+		 	name := getNameOrUID(self.oclAsType(EObject))+"Precedes_occursMeansEnteringLaterInTargetState_notForInitialState";
+			type := seqOfRelationDeclaration->select(rd | rd.name = "Precedes")->first();
+			
+			
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.oclAsType(EObject))+'_occurs']->first();
+					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.targetState.oclAsType(EObject))+'_enterIt']->first();
+					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
+				};
+		
+		theMainBlock.relations += result;
+		}
+		
+	
+		mapping inMM1::Event::occursMeansEnteringLaterInTargetState_initialState42occursMeansEnteringLaterInTargetState_initialState(): TimeModel::CCSLModel::ClockExpressionAndRelation::Relation
+			when { 
+				
+				(self.oclAsType(ecore::EObject).eContainer().oclAsType(SmartContract).initialState
+  			=
+  		 self.targetState
+  		) 
+				
+}
+		{
+		 	name := getNameOrUID(self.oclAsType(EObject))+"Precedes_occursMeansEnteringLaterInTargetState_initialState";
+			type := seqOfRelationDeclaration->select(rd | rd.name = "Precedes")->first();
+			
+					var theDelay : Integer := 1;
+			
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+					bindable := theMainBlock.elements[name = getNameOrUID(self.oclAsType(EObject))+'_occurs']->first();
+					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).leftEntity;
+				};
+				bindings += object TimeModel::CCSLModel::ClockExpressionAndRelation::Binding{
+							bindable := self -> map targetEnterDelayedByOne2Expression()->asSequence()->first();
+					_abstract := seqOfRelationDeclaration[name = 'Precedes']->first().oclAsType(TimeModel::CCSLModel::ClockExpressionAndRelation::KernelRelation::KernelRelationDeclaration).rightEntity;
+				};
+		
+		theMainBlock.relations += result;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mapping inMM1::SmartContract::simplelanguage2FeedBack() : FeedBack::ActionModel {
+	    theFeedBackSpec := result;
+		importStatements+= object FeedBack::ImportStatement{
+			importURI := getModelPath(ccsl.objectsOfType(TimeModel::Clock)->asSequence()->first().oclAsType(EObject));
+		}; 
+	getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), State.oclAsType(EClass)).oclAsType(State)->map enterIt2MSE();
+	getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), State.oclAsType(EClass)).oclAsType(State)->map leaveIt2MSE();
+	getVeryAllElementsFromResourceSetOf(self.oclAsType(EObject), Event.oclAsType(EClass)).oclAsType(Event)->map occurs2MSE();
+}		
+
+
+	 	mapping inMM1::State::enterIt2MSE() :FeedBack::ModelSpecificEvent 
+		{
+			name:= 'MSE_'+getNameOrUID(self.oclAsType(EObject))+'_enterIt';
+
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=getNameOrUID(self.oclAsType(EObject))+'_enterIt')->first().oclAsType(EObject);
+				
+			end{
+				theFeedBackSpec.events += result;
+				seqOfMSE += result
+			}
+		}
+	 	mapping inMM1::State::leaveIt2MSE() :FeedBack::ModelSpecificEvent 
+		{
+			name:= 'MSE_'+getNameOrUID(self.oclAsType(EObject))+'_leaveIt';
+
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=getNameOrUID(self.oclAsType(EObject))+'_leaveIt')->first().oclAsType(EObject);
+				
+			end{
+				theFeedBackSpec.events += result;
+				seqOfMSE += result
+			}
+		}
+	 	mapping inMM1::Event::occurs2MSE() :FeedBack::ModelSpecificEvent 
+		{
+			name:= 'MSE_'+getNameOrUID(self.oclAsType(EObject))+'_occurs';
+
+				caller := self.oclAsType(EObject);
+				action := self.oclAsType(EObject).eClass().eAllOperations->select(op |op.name = "fire")->first();
+				solverEvent := theMainBlock.elements[TimeModel::Clock]->select(c|c.name=getNameOrUID(self.oclAsType(EObject))+'_occurs')->first().oclAsType(EObject);
+				
+			end{
+				theFeedBackSpec.events += result;
+				seqOfMSE += result
+			}
+		}
+			
+		
+
+
+
+
+
+
+//priority stuff
+
+mapping inMM1::SmartContract::simplelanguage2Priority()  :Priority::PrioritySpecification  {
+	thePrioritySpec := result;
+	importedModel := object Priority::ImportStatement{
+		importURI := getModelPath(ccsl.objectsOfType(TimeModel::Clock)->asSequence()->first().oclAsType(EObject));
+	}; 
+}	
+
+
+
+

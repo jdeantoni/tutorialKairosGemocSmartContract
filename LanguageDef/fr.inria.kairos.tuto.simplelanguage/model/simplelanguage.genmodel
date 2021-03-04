@@ -20,6 +20,7 @@
     <genClasses ecoreClass="simplelanguage.ecore#//Event">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplelanguage.ecore#//Event/targetState"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplelanguage.ecore#//Event/sourceState"/>
+      <genOperations ecoreOperation="simplelanguage.ecore#//Event/fire"/>
     </genClasses>
     <genClasses ecoreClass="simplelanguage.ecore#//Function">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplelanguage.ecore#//Function/event"/>

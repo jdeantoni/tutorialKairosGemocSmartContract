@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="fr.inria.aoste.timesquare.launcher.core.launchConfigurationType">
+    <stringAttribute key="PrioritySource" value=""/>
+    <stringAttribute key="SimulationPolicy" value="fr.inria.aoste.timesquare.simulationpolicy@fr.inria.aoste.timesquare.simulationpolicy.random.RandomSimulationPolicy"/>
+    <intAttribute key="SimulationSteps" value="100"/>
+    <stringAttribute key="Source" value="/fr.inria.kairos.simplelanguage.tests/simple.extendedCCSL"/>
+    <booleanAttribute key="TimeDisplay" value="false"/>
+    <mapAttribute key="fr.inria.aoste.timesquare.backend.manager@behavior@fr.inria.aoste.timesquare.backend.codeexecution@fr.inria.aoste.timesquare.backend.codeexecution.manager.CodeExecutionManager">
+        <mapEntry key="IOO.active" value="false"/>
+        <mapEntry key="option" value=""/>
+    </mapAttribute>
+    <mapAttribute key="fr.inria.aoste.timesquare.backend.manager@behavior@fr.inria.aoste.timesquare.backend.obeoviewpointanimator@fr.inria.aoste.timesquare.backend.obeoviewpointanimator.ObeoViewpointAnimatorBehaviorManager">
+        <mapEntry key="IOO.active" value="false"/>
+        <mapEntry key="option" value=""/>
+    </mapAttribute>
+    <mapAttribute key="fr.inria.aoste.timesquare.backend.manager@behavior@fr.inria.aoste.timesquare.backend.power@fr.inria.aoste.timesquare.backend.power.behavior.PowerBehaviorManager">
+        <mapEntry key="IOO.active" value="false"/>
+        <mapEntry key="option" value=""/>
+    </mapAttribute>
+    <mapAttribute key="fr.inria.aoste.timesquare.backend.manager@behavior@fr.inria.aoste.timesquare.backend.vcdgenerator@fr.inria.aoste.timesquare.backend.vcdgenerator.manager.VCDGeneratorManager">
+        <mapEntry key="IOO.active" value="true"/>
+        <mapEntry key="option" value=""/>
+        <mapEntry key="vcdgeneration.clockBehaviorOptions" value="rO0ABXNyABNqYXZhLnV0aWwuQXJyYXlMaXN0eIHSHZnHYZ0DAAFJAARzaXpleHAAAAAKdwQAAAAKc3IAUGZyLmlucmlhLmFvc3RlLnRpbWVzcXVhcmUuYmFja2VuZC5tYW5hZ2VyLnNlcmlhbGl6YXRpb24uQmVoYXZpb3JQZXJzaXN0ZW50RW50aXR52sKHVk3Wa0ACAAJMAANfSUR0ABJMamF2YS9sYW5nL1N0cmluZztbAAZfc3RhdGV0AAJbWnhyAEhmci5pbnJpYS5hb3N0ZS50aW1lc3F1YXJlLmJhY2tlbmQubWFuYWdlci5zZXJpYWxpemF0aW9uLlBlcnNpc3RlbnRFbnRpdHmlAgBssQbGjwIAAkwAEl9wZXJzaXN0ZW50T3B0aW9uc3QARUxmci9pbnJpYS9hb3N0ZS90aW1lc3F1YXJlL2JhY2tlbmQvbWFuYWdlci92aXNpYmxlL1BlcnNpc3RlbnRPcHRpb25zO0wAC19wbHVnaW5OYW1lcQB+AAN4cHNyAF5mci5pbnJpYS5hb3N0ZS50aW1lc3F1YXJlLmJhY2tlbmQudmNkZ2VuZXJhdG9yLnBlcnNpc3RlbnRvcHRpb25zLlZDREdlbmVyYXRvclBlcnNpc3RlbnRPcHRpb25z2lsBWSSXilcCAARaAAdfZ2hvc3RzWgAHX3B1bHNlc0wAC19kaXNjcmV0aXplcQB+AANMAAVfbmFtZXEAfgADeHABAXQAAHQAEXNpbXBsZTo6bWFpbjo6ZTFGdAAOVkNEIEdlbmVyYXRpb250ACRzaW1wbGU6Om1haW46OmUxRnssIG1haW4sIG1haW46OmUxRn11cgACW1pXjyA5FLhd4gIAAHhwAAAACAEBAQEBAQEBc3EAfgACc3EAfgAIAQFxAH4ACnQAEXNpbXBsZTo6bWFpbjo6ZTJGcQB+AAx0ACRzaW1wbGU6Om1haW46OmUyRnssIG1haW4sIG1haW46OmUyRn11cQB+AA4AAAAIAQEBAQEBAQFzcQB+AAJzcQB+AAgBAXEAfgAKdAASc2ltcGxlOjptYWluOjpzMUVucQB+AAx0ACZzaW1wbGU6Om1haW46OnMxRW57LCBtYWluLCBtYWluOjpzMUVufXVxAH4ADgAAAAgBAQEBAQEBAXNxAH4AAnNxAH4ACAEBcQB+AAp0ABJzaW1wbGU6Om1haW46OnMxRXhxAH4ADHQAJnNpbXBsZTo6bWFpbjo6czFFeHssIG1haW4sIG1haW46OnMxRXh9dXEAfgAOAAAACAEBAQEBAQEBc3EAfgACc3EAfgAIAQFxAH4ACnQAEnNpbXBsZTo6bWFpbjo6czJFbnEAfgAMdAAmc2ltcGxlOjptYWluOjpzMkVueywgbWFpbiwgbWFpbjo6czJFbn11cQB+AA4AAAAIAQEBAQEBAQFzcQB+AAJzcQB+AAgBAXEAfgAKdAASc2ltcGxlOjptYWluOjpzMkV4cQB+AAx0ACZzaW1wbGU6Om1haW46OnMyRXh7LCBtYWluLCBtYWluOjpzMkV4fXVxAH4ADgAAAAgBAQEBAQEBAXNxAH4AAnNxAH4ACAEBdAAAdAA7c2ltcGxlOjptYWluOjpyZWxhdGlvbl8wOjpBbHRlcm5hdGVzRGVmOjpBbHRfYzFEZWxheWVkQnlPbmV0AA5WQ0QgR2VuZXJhdGlvbnQAp3NpbXBsZTo6bWFpbjo6cmVsYXRpb25fMDo6QWx0ZXJuYXRlc0RlZjo6QWx0X2MxRGVsYXllZEJ5T25leywgbWFpbiwgbWFpbjo6cmVsYXRpb25fMCwgQ0NTTF9SZWxhdGlvbnM6OkFsdGVybmF0ZXNEZWYsIENDU0xfUmVsYXRpb25zOjpBbHRlcm5hdGVzRGVmOjpBbHRfYzFEZWxheWVkQnlPbmV9dXEAfgAOAAAACAEBAQEBAQEBc3EAfgACc3EAfgAIAQFxAH4AK3QAO3NpbXBsZTo6bWFpbjo6cmVsYXRpb25fMTo6QWx0ZXJuYXRlc0RlZjo6QWx0X2MxRGVsYXllZEJ5T25lcQB+AC10AKdzaW1wbGU6Om1haW46OnJlbGF0aW9uXzE6OkFsdGVybmF0ZXNEZWY6OkFsdF9jMURlbGF5ZWRCeU9uZXssIG1haW4sIG1haW46OnJlbGF0aW9uXzEsIENDU0xfUmVsYXRpb25zOjpBbHRlcm5hdGVzRGVmLCBDQ1NMX1JlbGF0aW9uczo6QWx0ZXJuYXRlc0RlZjo6QWx0X2MxRGVsYXllZEJ5T25lfXVxAH4ADgAAAAgBAQEBAQEBAXNxAH4AAnNxAH4ACAEBcQB+ACt0ABpzaW1wbGU6Om1haW46OnMxRW5CdXRGaXJzdHEAfgAtdAA2c2ltcGxlOjptYWluOjpzMUVuQnV0Rmlyc3R7LCBtYWluLCBtYWluOjpzMUVuQnV0Rmlyc3R9dXEAfgAOAAAACAEBAQEBAQEBc3EAfgACc3EAfgAIAQFxAH4AK3QAN3NpbXBsZTo6bWFpbjo6czFFbkJ1dEZpcnN0OjpEZWxheUZvckRlZjo6RGVsYXlGb3JfZGVmZXJxAH4ALXQAoXNpbXBsZTo6bWFpbjo6czFFbkJ1dEZpcnN0OjpEZWxheUZvckRlZjo6RGVsYXlGb3JfZGVmZXJ7LCBtYWluLCBtYWluOjpzMUVuQnV0Rmlyc3QsIENDU0xfRXhwcmVzc2lvbnM6OkRlbGF5Rm9yRGVmLCBDQ1NMX0V4cHJlc3Npb25zOjpEZWxheUZvckRlZjo6RGVsYXlGb3JfZGVmZXJ9dXEAfgAOAAAACAEBAQEBAQEBeA=="/>
+        <mapEntry key="vcdgeneration.pluginOptions" value="rO0ABXNyAFhmci5pbnJpYS5hb3N0ZS50aW1lc3F1YXJlLmJhY2tlbmQudmNkZ2VuZXJhdG9yLnBlcnNpc3RlbnRvcHRpb25zLlBsdWdJblBlcnNpc3RlbnRPcHRpb25z9xIAXqRX31MCAAJaABBfbGF1bmNoVkNEVmlld2VyTAAUX3BhdGhUb0R1cmF0aW9uTW9kZWx0ABJMamF2YS9sYW5nL1N0cmluZzt4cAFw"/>
+    </mapAttribute>
+</launchConfiguration>

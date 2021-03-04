@@ -4,7 +4,7 @@
     <semanticResources>test1.smartc</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_jKocYHdbEeu_FMpFgPFZtg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jLKn4HdbEeu_FMpFgPFZtg" name="SmartContract" repPath="#_jKy0cHdbEeu_FMpFgPFZtg" changeId="509c50c5-f867-4fea-8f65-aa97945a6f3c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_jLKn4HdbEeu_FMpFgPFZtg" name="SmartContract" repPath="#_jKy0cHdbEeu_FMpFgPFZtg" changeId="74e08cb7-76ca-4def-90e2-039baaa036f1">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']"/>
         <target xmi:type="simplelanguage:SmartContract" href="test1.smartc#/"/>
       </ownedRepresentationDescriptors>
@@ -17,9 +17,9 @@
           <children xmi:type="notation:Node" xmi:id="_jMO-4HdbEeu_FMpFgPFZtg" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_jMO-4XdbEeu_FMpFgPFZtg" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_-Fue8HddEeu8r8ghXc4bRQ" type="3016" element="_-FspwXddEeu8r8ghXc4bRQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_-Fue8XddEeu8r8ghXc4bRQ" fontName="Noto Sans"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Fue8nddEeu8r8ghXc4bRQ"/>
+          <children xmi:type="notation:Node" xmi:id="_SkBJAHz5EeuyT6Q2wyTeHQ" type="3016" element="_SiuIgnz5EeuyT6Q2wyTeHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SkBJAXz5EeuyT6Q2wyTeHQ" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkBJAnz5EeuyT6Q2wyTeHQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_jMI4QXdbEeu_FMpFgPFZtg" fontColor="7490599" fontName="Noto Sans" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jMI4QndbEeu_FMpFgPFZtg" x="168" y="156" width="85" height="80"/>
@@ -28,9 +28,9 @@
           <children xmi:type="notation:Node" xmi:id="_jMVsk3dbEeu_FMpFgPFZtg" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_jMVslHdbEeu_FMpFgPFZtg" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_-FvGAHddEeu8r8ghXc4bRQ" type="3016" element="_-FspxHddEeu8r8ghXc4bRQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_-FvGAXddEeu8r8ghXc4bRQ" fontName="Noto Sans"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-FvGAnddEeu8r8ghXc4bRQ"/>
+          <children xmi:type="notation:Node" xmi:id="_SkBwEHz5EeuyT6Q2wyTeHQ" type="3016" element="_SiyZ8nz5EeuyT6Q2wyTeHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SkBwEXz5EeuyT6Q2wyTeHQ" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkBwEnz5EeuyT6Q2wyTeHQ"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_jMVskXdbEeu_FMpFgPFZtg" fontColor="7490599" fontName="Noto Sans" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jMVskndbEeu_FMpFgPFZtg" x="360" y="156" width="80" height="80"/>
@@ -44,7 +44,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZlFcndcEeuzlPPqWs4V4A"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bZC58XdcEeuzlPPqWs4V4A" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZC58ndcEeuzlPPqWs4V4A" x="168" y="12" width="10" height="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZC58ndcEeuzlPPqWs4V4A" x="300" y="108" width="10" height="10"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_bZj3UHdcEeuzlPPqWs4V4A" type="2001" element="_bY8MQXdcEeuzlPPqWs4V4A">
           <children xmi:type="notation:Node" xmi:id="_bZkeYHdcEeuzlPPqWs4V4A" type="5002">
@@ -55,88 +55,131 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZmTkndcEeuzlPPqWs4V4A"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_bZj3UXdcEeuzlPPqWs4V4A" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZj3UndcEeuzlPPqWs4V4A" x="72" y="2" width="10" height="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bZj3UndcEeuzlPPqWs4V4A" x="300" y="219" width="10" height="10"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_gVOjQHdgEeu_0YbOiujHMQ" type="2001" element="_gU3W4HdgEeu_0YbOiujHMQ">
-          <children xmi:type="notation:Node" xmi:id="_gVS0sHdgEeu_0YbOiujHMQ" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_gVS0sXdgEeu_0YbOiujHMQ" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_xR2LQHzYEeuivIHsoBXi4g" type="2001" element="_xRu2gHzYEeuivIHsoBXi4g">
+          <children xmi:type="notation:Node" xmi:id="_xR7DwHzYEeuivIHsoBXi4g" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_xR7DwXzYEeuivIHsoBXi4g" y="5"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_gVUp4HdgEeu_0YbOiujHMQ" type="3016" element="_gU-EkHdgEeu_0YbOiujHMQ">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_gVUp4XdgEeu_0YbOiujHMQ" fontName="Noto Sans"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gVUp4ndgEeu_0YbOiujHMQ"/>
+          <children xmi:type="notation:Node" xmi:id="_SkBwE3z5EeuyT6Q2wyTeHQ" type="3016" element="_Si2EUXz5EeuyT6Q2wyTeHQ">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_SkBwFHz5EeuyT6Q2wyTeHQ" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SkBwFXz5EeuyT6Q2wyTeHQ"/>
           </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_gVOjQXdgEeu_0YbOiujHMQ" fontColor="7490599" fontName="Noto Sans" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gVOjQndgEeu_0YbOiujHMQ" x="564" y="204" width="80" height="80"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_xR2LQXzYEeuivIHsoBXi4g" fontColor="7490599" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xR2LQnzYEeuivIHsoBXi4g" x="576" y="204" width="80" height="80"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_xR7DwnzYEeuivIHsoBXi4g" type="2001" element="_xRx50HzYEeuivIHsoBXi4g">
+          <children xmi:type="notation:Node" xmi:id="_xR7q0HzYEeuivIHsoBXi4g" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_xR7q0XzYEeuivIHsoBXi4g" x="-13" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_xR_VMHzYEeuivIHsoBXi4g" type="3017" element="_xRx50XzYEeuivIHsoBXi4g">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_xR_VMXzYEeuivIHsoBXi4g" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xR_VMnzYEeuivIHsoBXi4g"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_xR7Dw3zYEeuivIHsoBXi4g" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xR7DxHzYEeuivIHsoBXi4g" x="528" y="168" width="10" height="10"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_2CyKsHzYEeuivIHsoBXi4g" type="2001" element="_2CugWHzYEeuivIHsoBXi4g">
+          <children xmi:type="notation:Node" xmi:id="_2CyKs3zYEeuivIHsoBXi4g" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_2CyKtHzYEeuivIHsoBXi4g" x="-13" y="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2CyxwHzYEeuivIHsoBXi4g" type="3017" element="_2CvHYHzYEeuivIHsoBXi4g">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_2CyxwXzYEeuivIHsoBXi4g" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2CyxwnzYEeuivIHsoBXi4g"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_2CyKsXzYEeuivIHsoBXi4g" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2CyKsnzYEeuivIHsoBXi4g" x="430" y="348" width="10" height="10"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_jLbtoXdbEeu_FMpFgPFZtg"/>
-        <edges xmi:type="notation:Edge" xmi:id="_4foZIHddEeu8r8ghXc4bRQ" type="4001" element="_4fhEYHddEeu8r8ghXc4bRQ" source="_jMVskHdbEeu_FMpFgPFZtg" target="_jMI4QHdbEeu_FMpFgPFZtg">
-          <children xmi:type="notation:Node" xmi:id="_4frccHddEeu8r8ghXc4bRQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4frccXddEeu8r8ghXc4bRQ" x="-20" y="-7"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_4frccnddEeu8r8ghXc4bRQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4frcc3ddEeu8r8ghXc4bRQ" x="41" y="10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_4fsDgHddEeu8r8ghXc4bRQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4fsDgXddEeu8r8ghXc4bRQ" x="-14" y="-45"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_4foZIXddEeu8r8ghXc4bRQ" routing="Rectilinear"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_4foZInddEeu8r8ghXc4bRQ" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_4foZI3ddEeu8r8ghXc4bRQ" points="[8, -40, 191, -55]$[8, -52, 191, -67]$[-196, -52, -13, -67]$[-196, -28, -13, -43]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4fvt4HddEeu8r8ghXc4bRQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_4fvt4XddEeu8r8ghXc4bRQ" id="(0.5764705882352941,0.6875)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_qTUZgHdfEeuoV4H5ZJ5cDg" type="4001" element="_qTPhAndfEeuoV4H5ZJ5cDg" source="_jMI4QHdbEeu_FMpFgPFZtg" target="_jMVskHdbEeu_FMpFgPFZtg">
           <children xmi:type="notation:Node" xmi:id="_qTW1wHdfEeuoV4H5ZJ5cDg" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qTW1wXdfEeuoV4H5ZJ5cDg" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_qTXc0HdfEeuoV4H5ZJ5cDg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qTXc0XdfEeuoV4H5ZJ5cDg" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qTXc0XdfEeuoV4H5ZJ5cDg" x="39" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_qTXc0ndfEeuoV4H5ZJ5cDg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qTXc03dfEeuoV4H5ZJ5cDg" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qTXc03dfEeuoV4H5ZJ5cDg" x="-36" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_qTUZgXdfEeuoV4H5ZJ5cDg" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_qTUZgndfEeuoV4H5ZJ5cDg" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qTUZg3dfEeuoV4H5ZJ5cDg" points="[0, 0, -232, 0]$[192, 0, -40, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qTUZg3dfEeuoV4H5ZJ5cDg" points="[0, -40, -190, -40]$[0, -52, -190, -52]$[190, -52, 0, -52]$[190, -40, 0, -40]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qTbHMHdfEeuoV4H5ZJ5cDg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qTbHMXdfEeuoV4H5ZJ5cDg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_2C0m8HzYEeuivIHsoBXi4g" type="4001" element="_2CwVhHzYEeuivIHsoBXi4g" source="_jMVskHdbEeu_FMpFgPFZtg" target="_xR2LQHzYEeuivIHsoBXi4g">
+          <children xmi:type="notation:Node" xmi:id="_2C1OAHzYEeuivIHsoBXi4g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C1OAXzYEeuivIHsoBXi4g" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2C11EHzYEeuivIHsoBXi4g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C11EXzYEeuivIHsoBXi4g" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2C2cIHzYEeuivIHsoBXi4g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C2cIXzYEeuivIHsoBXi4g" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_2C0m8XzYEeuivIHsoBXi4g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_2C0m8nzYEeuivIHsoBXi4g" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2C0m83zYEeuivIHsoBXi4g" points="[40, 0, -176, -48]$[108, 0, -108, -48]$[108, 48, -108, 0]$[176, 48, -40, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2C44YHzYEeuivIHsoBXi4g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2C44YXzYEeuivIHsoBXi4g" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_2C44YnzYEeuivIHsoBXi4g" type="4001" element="_2Cw8knzYEeuivIHsoBXi4g" source="_xR2LQHzYEeuivIHsoBXi4g" target="_jMI4QHdbEeu_FMpFgPFZtg">
+          <children xmi:type="notation:Node" xmi:id="_2C44ZnzYEeuivIHsoBXi4g" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C44Z3zYEeuivIHsoBXi4g" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2C44aHzYEeuivIHsoBXi4g" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C44aXzYEeuivIHsoBXi4g" x="47" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_2C44anzYEeuivIHsoBXi4g" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2C44a3zYEeuivIHsoBXi4g" x="-98" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_2C44Y3zYEeuivIHsoBXi4g" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_2C44ZHzYEeuivIHsoBXi4g" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2C44ZXzYEeuivIHsoBXi4g" points="[0, 40, 406, 88]$[0, 68, 406, 116]$[-406, 68, 0, 116]$[-406, -8, 0, 40]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2C5fcHzYEeuivIHsoBXi4g" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_2C5fcXzYEeuivIHsoBXi4g" id="(0.5,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_jL9SEHdbEeu_FMpFgPFZtg" source="DANNOTATION_CUSTOMIZATION_KEY">
-      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_jL95IHdbEeu_FMpFgPFZtg"/>
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_jL95IHdbEeu_FMpFgPFZtg">
+        <computedStyleDescriptions xmi:type="style:EllipseNodeDescription" xmi:id="_SiuIgHz5EeuyT6Q2wyTeHQ" borderSizeComputationExpression="3" labelSize="12" showIcon="false" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+        </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EllipseNodeDescription" xmi:id="_SiyZ8Hz5EeuyT6Q2wyTeHQ" borderSizeComputationExpression="1" labelSize="12" showIcon="false" sizeComputationExpression="8" labelPosition="node" resizeKind="NSEW">
+          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+        </computedStyleDescriptions>
+      </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jLkQgHdbEeu_FMpFgPFZtg" name="s111" outgoingEdges="_qTPhAndfEeuoV4H5ZJ5cDg" incomingEdges="_4fhEYHddEeu8r8ghXc4bRQ" width="5" height="5" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jLkQgHdbEeu_FMpFgPFZtg" name="s1111" outgoingEdges="_qTPhAndfEeuoV4H5ZJ5cDg" incomingEdges="_2Cw8knzYEeuivIHsoBXi4g" width="5" height="5" resizeKind="NSEW">
       <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.0"/>
       <semanticElements xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.0"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_-FspwXddEeu8r8ghXc4bRQ" labelSize="12" showIcon="false" labelColor="154,103,23" borderSize="3" borderSizeComputationExpression="3" borderColor="154,103,23" labelPosition="node" color="255,245,181">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@conditionnalStyles.0/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_SiuIgnz5EeuyT6Q2wyTeHQ" labelSize="12" showIcon="false" labelColor="154,103,23" description="_SiuIgHz5EeuyT6Q2wyTeHQ" borderSize="3" borderSizeComputationExpression="3" borderColor="154,103,23" labelPosition="node" color="255,245,181"/>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jL8D8HdbEeu_FMpFgPFZtg" name="s2222" outgoingEdges="_4fhEYHddEeu8r8ghXc4bRQ" incomingEdges="_qTPhAndfEeuoV4H5ZJ5cDg" width="8" height="8" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jL8D8HdbEeu_FMpFgPFZtg" name="s2222" outgoingEdges="_2CwVhHzYEeuivIHsoBXi4g" incomingEdges="_qTPhAndfEeuoV4H5ZJ5cDg" width="8" height="8" resizeKind="NSEW">
       <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.1"/>
       <semanticElements xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.1"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_-FspxHddEeu8r8ghXc4bRQ" labelSize="12" showIcon="false" labelColor="39,76,114" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_SiyZ8nz5EeuyT6Q2wyTeHQ" labelSize="12" showIcon="false" labelColor="39,76,114" description="_SiyZ8Hz5EeuyT6Q2wyTeHQ" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" labelPosition="node" color="194,239,255"/>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_gU3W4HdgEeu_0YbOiujHMQ" name="zaza" width="8" height="8" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_xRu2gHzYEeuivIHsoBXi4g" name="s333" outgoingEdges="_2Cw8knzYEeuivIHsoBXi4g" incomingEdges="_2CwVhHzYEeuivIHsoBXi4g" width="8" height="8" resizeKind="NSEW">
       <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.2"/>
       <semanticElements xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.2"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Ellipse" uid="_gU-EkHdgEeu_0YbOiujHMQ" labelSize="12" showIcon="false" labelColor="39,76,114" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@style"/>
-      </ownedStyle>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_Si2EUXz5EeuyT6Q2wyTeHQ" labelSize="12" showIcon="false" labelColor="39,76,114" description="_SiyZ8Hz5EeuyT6Q2wyTeHQ" borderSize="1" borderSizeComputationExpression="1" borderColor="39,76,114" labelPosition="node" color="194,239,255"/>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_bY6XEHdcEeuzlPPqWs4V4A" name="e111" width="1" height="1">
@@ -153,18 +196,35 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_bY8MQXdcEeuzlPPqWs4V4A" name="e222" width="1" height="1">
       <target xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.1"/>
       <semanticElements xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Lozenge" uid="_bY8MQndcEeuzlPPqWs4V4A" labelSize="12" showIcon="false" borderColor="239,41,41" color="239,41,41">
         <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_4fhEYHddEeu8r8ghXc4bRQ" sourceNode="_jL8D8HdbEeu_FMpFgPFZtg" targetNode="_jLkQgHdbEeu_FMpFgPFZtg">
-      <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.1"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_4fhrcHddEeu8r8ghXc4bRQ" size="2" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_4fhrcXddEeu8r8ghXc4bRQ" labelSize="12"/>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_xRx50HzYEeuivIHsoBXi4g" name="e333" width="1" height="1">
+      <target xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.2"/>
+      <semanticElements xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_xRx50XzYEeuivIHsoBXi4g" labelSize="12" showIcon="false" borderColor="239,41,41" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_2CugWHzYEeuivIHsoBXi4g" name="e444" width="1" height="1">
+      <target xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.3"/>
+      <semanticElements xmi:type="simplelanguage:Event" href="test1.smartc#//@ownedEvents.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Lozenge" uid="_2CvHYHzYEeuivIHsoBXi4g" labelSize="12" showIcon="false" borderColor="239,41,41" color="239,41,41">
+        <description xmi:type="style:LozengeNodeDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_qTPhAndfEeuoV4H5ZJ5cDg" sourceNode="_jLkQgHdbEeu_FMpFgPFZtg" targetNode="_jL8D8HdbEeu_FMpFgPFZtg">
       <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.0"/>
@@ -174,9 +234,27 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
     </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_2CwVhHzYEeuivIHsoBXi4g" sourceNode="_jL8D8HdbEeu_FMpFgPFZtg" targetNode="_xRu2gHzYEeuivIHsoBXi4g">
+      <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_2CwVhXzYEeuivIHsoBXi4g" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_2CwVhnzYEeuivIHsoBXi4g" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_2Cw8knzYEeuivIHsoBXi4g" sourceNode="_xRu2gHzYEeuivIHsoBXi4g" targetNode="_jLkQgHdbEeu_FMpFgPFZtg">
+      <target xmi:type="simplelanguage:State" href="test1.smartc#//@ownedStates.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_2Cw8k3zYEeuivIHsoBXi4g" size="2" routingStyle="manhattan" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_2Cw8lHzYEeuivIHsoBXi4g" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_jK8lcHdbEeu_FMpFgPFZtg"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@additionalLayers[name='Debug']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/fr.inria.kairos.tuto.simplelanguage.design/description/simplelanguage.odesign#//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@additionalLayers[name='Animation']"/>
     <target xmi:type="simplelanguage:SmartContract" href="test1.smartc#/"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

@@ -42,7 +42,61 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers name="Debug" activeByDefault="true">
+        <toolSections name="Debug">
+          <ownedTools xsi:type="tool_1:PopupMenu" name="Gemoc">
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Debug" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/debug_exc.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Debug" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/debug_exc.gif" id="org.eclipse.gemoc.execution.sequential.javaengine.ui.debug.sirius.action.gemocDebugAs"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Toggle breakpoint" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/debug_exc.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Toggle Gemoc breakpoint" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/breakpoint.gif" id="org.eclipse.gemoc.execution.sequential.javaengine.ui.debug.sirius.action.GemocSequentialToggleBreakpointAction"/>
+              </initialOperation>
+            </menuItemDescription>
+            <menuItemDescription xsi:type="tool_1:OperationAction" name="Toggle conditional breakpoint" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/debug_exc.gif">
+              <view name="views"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="Toggle Gemoc conditional breakpoint" icon="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/breakpoint.gif" id="org.eclipse.gemoc.execution.sequential.javaengine.ui.debug.sirius.action.GemocSequentialToggleConditionalBreakpointAction"/>
+              </initialOperation>
+            </menuItemDescription>
+          </ownedTools>
+        </toolSections>
+        <decorationDescriptionsSet>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Enabled breakpoint" position="WEST" preconditionExpression="service:self.hasEnabledBreakpoint" imageExpression="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/breakpoint_enabled.gif" mappings="//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State'] //@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event'] //@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
+          <decorationDescriptions xsi:type="description_1:MappingBasedDecoration" name="Disabled breakpoint" position="WEST" preconditionExpression="service:self.hasDisabledBreakpoint" imageExpression="/org.eclipse.gemoc.executionframework.extensions.sirius/icons/breakpoint_disabled.gif" mappings="//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State'] //@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event'] //@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@edgeMappings[name='Transition']"/>
+        </decorationDescriptionsSet>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:self.isCurrentInstruction">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="borderColor" value="//@userColorsPalettes[name='SmartContract%20Palette']/@entries[name='current%20instruction']"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="strokeColor" value="//@userColorsPalettes[name='SmartContract%20Palette']/@entries[name='current%20instruction']"/>
+            <featureCustomizations xsi:type="description:EReferenceCustomization" applyOnAll="true" referenceName="labelColor" value="//@userColorsPalettes[name='SmartContract%20Palette']/@entries[name='current%20instruction']"/>
+          </vsmElementCustomizations>
+        </customization>
+      </additionalLayers>
+      <additionalLayers name="Animation">
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="[self = self.oclAsType(ecore::EObject).eContainer().oclAsType(SmartContract).getCurrentState()/]">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@conditionnalStyles.0/@style //@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='State']/@style" referenceName="color">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="service:hasBeenActivated()">
+            <featureCustomizations xsi:type="description:EReferenceCustomization" appliedOn="//@ownedViewpoints[name='SmartContract']/@ownedRepresentations[name='SmartContract']/@defaultLayer/@nodeMappings[name='Event']/@style" applyOnAll="true" referenceName="color">
+              <value href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            </featureCustomizations>
+          </vsmElementCustomizations>
+        </customization>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.inria.kairos.tuto.simplelanguage.design.Services"/>
+    <ownedJavaExtensions qualifiedClassName="fr.inria.kairos.tuto.simplelanguage.design.services.SmartcontractDebugServices"/>
+    <ownedJavaExtensions qualifiedClassName="fr.inria.kairos.tuto.simplelanguage.design.services.SmartcontractAnimationServices"/>
   </ownedViewpoints>
+  <userColorsPalettes name="SmartContract Palette">
+    <entries xsi:type="description:UserFixedColor" red="255" green="255" blue="0" name="current instruction"/>
+  </userColorsPalettes>
 </description:Group>

@@ -20,6 +20,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="initialState" eType="#//State"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//NamedElement">
+    <eOperations name="fire"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="targetState" eType="#//State"
         resolveProxies="false" eOpposite="#//State/inputEvent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sourceState" eType="#//State"
